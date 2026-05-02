@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Valentino Román Virzi · Backend Developer</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- ===================== NAVBAR ===================== -->
+  <nav id="navbar">
+    <div class="nav-logo">VRV</div>
+    <ul class="nav-links">
+      <li><a href="#sobre-mi">Sobre mí</a></li>
+      <li><a href="#habilidades">Habilidades</a></li>
+      <li><a href="#experiencia">Experiencia</a></li>
+      <li><a href="#proyectos">Proyectos</a></li>
+      <li><a href="#contacto">Contacto</a></li>
+    </ul>
+    <button class="nav-cta" onclick="scrollToSection('contacto')">Contratame</button>
+  </nav>
+
+  <!-- ===================== HERO ===================== -->
+  <section id="hero">
+    <div class="hero-content">
+      <p class="hero-eyebrow">Backend Developer · .NET / C#</p>
+      <h1 class="hero-name">Valentino<br>Román Virzi</h1>
+      <p class="hero-tagline">
+        Construyo sistemas robustos y escalables.<br>
+        Especializado en C#, .NET Core, ASP.NET y SQL Server.
+      </p>
+      <div class="hero-actions">
+        <button onclick="scrollToSection('proyectos')">Ver proyectos</button>
+        <a href="#contacto">Hablemos</a>
+      </div>
+    </div>
+    <div class="hero-location">Buenos Aires, Argentina</div>
+  </section>
+
+  <!-- ===================== SOBRE MÍ ===================== -->
+  <section id="sobre-mi">
+    <div class="section-inner">
+      <h2 class="section-title">Sobre mí</h2>
+      <div class="sobre-grid">
+        <div class="sobre-texto">
+          <p>
+            Soy desarrollador backend junior especializado en <strong>C# y .NET</strong>,
+            con sólidos conocimientos en programación orientada a objetos, estructuras de datos
+            y patrones de diseño.
+          </p>
+          <p>
+            Actualmente me desempeño como <strong>Responsable de Sistemas y Telecomunicaciones</strong>
+            en Ital Farma S.A., liderando proyectos IT e infraestructura en un entorno corporativo exigente.
+          </p>
+          <p>
+            Estoy enfocado en seguir creciendo como desarrollador backend, construyendo
+            arquitecturas limpias con <strong>ASP.NET Core, REST APIs y SQL Server</strong>.
+          </p>
+        </div>
+        <div class="sobre-datos">
+          <div class="dato">
+            <span class="dato-num">3+</span>
+            <span class="dato-label">Años de experiencia IT</span>
+          </div>
+          <div class="dato">
+            <span class="dato-num">7+</span>
+            <span class="dato-label">Proyectos desarrollados</span>
+          </div>
+          <div class="dato">
+            <span class="dato-num">2</span>
+            <span class="dato-label">Idiomas</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== HABILIDADES ===================== -->
+  <section id="habilidades">
+    <div class="section-inner">
+      <h2 class="section-title">Stack técnico</h2>
+      <div class="skills-grid">
+
+        <div class="skill-group">
+          <h3>Principal</h3>
+          <div class="skill-tags">
+            <span class="tag highlight">C#</span>
+            <span class="tag highlight">.NET Core</span>
+            <span class="tag highlight">ASP.NET Core</span>
+            <span class="tag highlight">SQL Server</span>
+          </div>
+        </div>
+
+        <div class="skill-group">
+          <h3>Backend</h3>
+          <div class="skill-tags">
+            <span class="tag">REST APIs</span>
+            <span class="tag">SOLID</span>
+            <span class="tag">Arquitectura en capas</span>
+            <span class="tag">Design Patterns</span>
+          </div>
+        </div>
+
+        <div class="skill-group">
+          <h3>Lenguajes</h3>
+          <div class="skill-tags">
+            <span class="tag">SQL</span>
+            <span class="tag">Python (básico)</span>
+            <span class="tag">Java (básico)</span>
+            <span class="tag">JavaScript (básico)</span>
+          </div>
+        </div>
+
+        <div class="skill-group">
+          <h3>Herramientas</h3>
+          <div class="skill-tags">
+            <span class="tag">Git</span>
+            <span class="tag">GitHub</span>
+            <span class="tag">Scrum</span>
+            <span class="tag">SharePoint</span>
+          </div>
+        </div>
+
+        <div class="skill-group">
+          <h3>IT / Infraestructura</h3>
+          <div class="skill-tags">
+            <span class="tag">Redes</span>
+            <span class="tag">Servidores</span>
+            <span class="tag">Soporte técnico</span>
+          </div>
+        </div>
+
+        <div class="skill-group">
+          <h3>Soft skills</h3>
+          <div class="skill-tags">
+            <span class="tag">Resolución de problemas</span>
+            <span class="tag">Liderazgo</span>
+            <span class="tag">Trabajo en equipo</span>
+            <span class="tag">Comunicación</span>
+            <span class="tag">Aprendizaje continuo</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== EXPERIENCIA ===================== -->
+  <section id="experiencia">
+    <div class="section-inner">
+      <h2 class="section-title">Experiencia</h2>
+      <div class="timeline">
+
+        <div class="timeline-item">
+          <div class="timeline-fecha">Jun 2025 — Actualidad</div>
+          <div class="timeline-contenido">
+            <h3>Responsable de Sistemas y Telecomunicaciones</h3>
+            <p class="timeline-empresa">Ital Farma S.A.</p>
+            <ul>
+              <li>Definición y ejecución de estrategia de sistemas y telecomunicaciones</li>
+              <li>Coordinación de proyectos IT e implementación de nuevas tecnologías</li>
+              <li>Administración de servidores, software base y operaciones críticas</li>
+              <li>Gestión de seguridad informática: usuarios, accesos e información</li>
+              <li>Supervisión de infraestructura tecnológica y proveedores</li>
+            </ul>
+            <p class="timeline-logro">✦ Optimización de procesos IT e implementación de mejoras en infraestructura tecnológica</p>
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-fecha">Oct 2024 — Jun 2025</div>
+          <div class="timeline-contenido">
+            <h3>Analista de Sistemas</h3>
+            <p class="timeline-empresa">Ital Farma S.A.</p>
+            <ul>
+              <li>Soporte técnico a usuarios: hardware, software y redes</li>
+              <li>Resolución de incidentes y troubleshooting</li>
+              <li>Mantenimiento de equipos e impresoras</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-fecha">Abr 2023 — Sep 2024</div>
+          <div class="timeline-contenido">
+            <h3>Pasante IT</h3>
+            <p class="timeline-empresa">Gate Gourmet SRL</p>
+            <ul>
+              <li>Resolución de incidentes técnicos en entorno corporativo</li>
+              <li>Instalación y configuración de equipos</li>
+              <li>Soporte en redes e infraestructura · Gestión de inventario</li>
+            </ul>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Educación dentro de experiencia -->
+      <div class="educacion">
+        <h2 class="section-title" style="margin-top: 3rem;">Educación</h2>
+        <div class="edu-grid">
+          <div class="edu-item">
+            <h3>Lic. en Desarrollo de Videojuegos</h3>
+            <p>UADE · 2022 – 2025</p>
+            <span class="badge">Título intermedio: Técnico 2025</span>
+          </div>
+          <div class="edu-item">
+            <h3>Ingeniería Informática</h3>
+            <p>UADE · 2021 – 2022 (retomando)</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ===================== PROYECTOS ===================== -->
+  <section id="proyectos">
+    <div class="section-inner">
+      <h2 class="section-title">Proyectos destacados</h2>
+      <p class="section-subtitle">Hacé clic en cada proyecto para ver los detalles.</p>
+      <div class="proyectos-grid">
+
+        <div class="proyecto-card" onclick="abrirModal('modal-arcade')">
+          <div class="proyecto-tags">
+            <span class="tag">C#</span>
+            <span class="tag">POO</span>
+            <span class="tag">Design Patterns</span>
+          </div>
+          <h3>Sistema Arcade en C#</h3>
+          <p>Simulación de juego completa con POO avanzada, patrones Factory, Singleton y Object Pool.</p>
+          <span class="proyecto-cta">Ver detalles →</span>
+        </div>
+
+        <div class="proyecto-card" onclick="abrirModal('modal-entidades')">
+          <div class="proyecto-tags">
+            <span class="tag">C#</span>
+            <span class="tag">Flyweight</span>
+            <span class="tag">Architecture</span>
+          </div>
+          <h3>Sistema de Entidades Optimizado</h3>
+          <p>Prototipo con patrón Flyweight para optimización de memoria. Arquitectura desacoplada y escalable.</p>
+          <span class="proyecto-cta">Ver detalles →</span>
+        </div>
+
+        <div class="proyecto-card" onclick="abrirModal('modal-interna')">
+          <div class="proyecto-tags">
+            <span class="tag">C#</span>
+            <span class="tag">SQL</span>
+          </div>
+          <h3>Aplicación Interna Empresarial</h3>
+          <p>Herramienta para optimización de procesos internos con lógica de negocio y manejo de datos estructurados.</p>
+          <span class="proyecto-cta">Ver detalles →</span>
+        </div>
+
+        <div class="proyecto-card" onclick="abrirModal('modal-migracion')">
+          <div class="proyecto-tags">
+            <span class="tag">.NET</span>
+            <span class="tag">ASP.NET Core</span>
+            <span class="tag">SQL Server</span>
+          </div>
+          <h3>Migración a Arquitectura Web</h3>
+          <p class="badge-dev">En desarrollo</p>
+          <p>Rediseño de arquitectura hacia entorno web con backend basado en servicios y base de datos relacional.</p>
+          <span class="proyecto-cta">Ver detalles →</span>
+        </div>
+
+        <!-- PLACEHOLDER — completar con más proyectos -->
+        <div class="proyecto-card proyecto-placeholder" onclick="abrirModal('modal-proximamente')">
+          <h3>Próximamente</h3>
+          <p>Más proyectos serán añadidos cuando los repositorios estén disponibles.</p>
+          <span class="proyecto-cta">Próximamente →</span>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== CONTACTO ===================== -->
+  <section id="contacto">
+    <div class="section-inner contacto-inner">
+      <h2 class="section-title">Hablemos</h2>
+      <p class="contacto-texto">
+        Estoy abierto a nuevas oportunidades laborales, proyectos freelance o simplemente intercambiar ideas.
+        No dudes en escribirme.
+      </p>
+      <div class="contacto-links">
+        <a href="mailto:valentinovirzi94@gmail.com" class="contacto-link">
+          <span class="contacto-icon">✉</span>
+          valentinovirzi94@gmail.com
+        </a>
+        <a href="https://linkedin.com/in/valentino-virzi" target="_blank" class="contacto-link">
+          <span class="contacto-icon">in</span>
+          linkedin.com/in/valentino-virzi
+        </a>
+        <a href="https://github.com/" target="_blank" class="contacto-link" id="link-github">
+          <span class="contacto-icon">⌥</span>
+          GitHub (próximamente público)
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== FOOTER ===================== -->
+  <footer>
+    <p>© 2025 Valentino Román Virzi · Hecho con HTML, CSS y JS</p>
+  </footer>
+
+  <!-- ==================== MODALES DE PROYECTOS ==================== -->
+
+  <!-- Modal: Sistema Arcade -->
+  <div id="modal-arcade" class="modal" onclick="cerrarModalFuera(event, 'modal-arcade')">
+    <div class="modal-box">
+      <button class="modal-close" onclick="cerrarModal('modal-arcade')">✕</button>
+      <div class="modal-tags">
+        <span class="tag">C#</span><span class="tag">POO</span><span class="tag">Design Patterns</span>
+      </div>
+      <h2>Sistema Arcade en C#</h2>
+      <p>
+        Simulación de juego completa aplicando POO avanzada. Implementa los patrones de diseño
+        <strong>Factory</strong> (creación de entidades), <strong>Singleton</strong> (gestión de estado global)
+        y <strong>Object Pool</strong> (reutilización de objetos para optimizar memoria).
+      </p>
+      <p>
+        El proyecto demuestra herencia, polimorfismo y diseño modular en un entorno orientado a objetos real.
+      </p>
+      <div class="modal-footer">
+        <span class="modal-estado">Repositorio: privado (próximamente público)</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal: Entidades Optimizadas -->
+  <div id="modal-entidades" class="modal" onclick="cerrarModalFuera(event, 'modal-entidades')">
+    <div class="modal-box">
+      <button class="modal-close" onclick="cerrarModal('modal-entidades')">✕</button>
+      <div class="modal-tags">
+        <span class="tag">C#</span><span class="tag">Flyweight</span><span class="tag">Architecture</span>
+      </div>
+      <h2>Sistema de Entidades Optimizado</h2>
+      <p>
+        Prototipo que implementa el patrón <strong>Flyweight</strong> para optimización de uso de memoria
+        en escenarios con gran cantidad de entidades similares.
+      </p>
+      <p>
+        Diseño con arquitectura desacoplada y escalable, aplicando principios SOLID para facilitar
+        la extensión sin modificar el código existente.
+      </p>
+      <div class="modal-footer">
+        <span class="modal-estado">Repositorio: privado (próximamente público)</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal: Aplicación Interna -->
+  <div id="modal-interna" class="modal" onclick="cerrarModalFuera(event, 'modal-interna')">
+    <div class="modal-box">
+      <button class="modal-close" onclick="cerrarModal('modal-interna')">✕</button>
+      <div class="modal-tags">
+        <span class="tag">C#</span><span class="tag">SQL</span>
+      </div>
+      <h2>Aplicación Interna Empresarial</h2>
+      <p>
+        Herramienta desarrollada para uso interno en entorno corporativo. Permite la optimización
+        de procesos internos mediante lógica de negocio estructurada y persistencia de datos
+        con <strong>SQL Server</strong>.
+      </p>
+      <p>
+        Incluye manejo de datos estructurados, consultas optimizadas y una interfaz funcional
+        orientada al usuario final no técnico.
+      </p>
+      <div class="modal-footer">
+        <span class="modal-estado">Repositorio: privado</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal: Migración Web -->
+  <div id="modal-migracion" class="modal" onclick="cerrarModalFuera(event, 'modal-migracion')">
+    <div class="modal-box">
+      <button class="modal-close" onclick="cerrarModal('modal-migracion')">✕</button>
+      <div class="modal-tags">
+        <span class="tag">.NET</span><span class="tag">ASP.NET Core</span><span class="tag">SQL Server</span>
+      </div>
+      <h2>Migración a Arquitectura Web</h2>
+      <p class="badge-dev">En desarrollo</p>
+      <p>
+        Proyecto de rediseño de arquitectura desde una aplicación de escritorio hacia un entorno web moderno.
+        El backend está siendo construido con <strong>ASP.NET Core</strong> siguiendo arquitectura en capas
+        y principios REST, con base de datos relacional en <strong>SQL Server</strong>.
+      </p>
+      <div class="modal-footer">
+        <span class="modal-estado">En progreso · Repositorio próximamente</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal: Próximamente -->
+  <div id="modal-proximamente" class="modal" onclick="cerrarModalFuera(event, 'modal-proximamente')">
+    <div class="modal-box">
+      <button class="modal-close" onclick="cerrarModal('modal-proximamente')">✕</button>
+      <h2>Más proyectos en camino</h2>
+      <p>Estoy en proceso de hacer públicos los repositorios en GitHub. ¡Volvé pronto!</p>
+    </div>
+  </div>
+
+  <script src="main.js"></script>
+</body>
+</html>

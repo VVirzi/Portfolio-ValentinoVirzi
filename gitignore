@@ -1,0 +1,36 @@
+# ===================== SISTEMA OPERATIVO =====================
+
+# Windows
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# ===================== EDITORES =====================
+
+# VS Code
+.vscode/
+*.code-workspace
+
+# IntelliJ / JetBrains
+.idea/
+*.iml
+
+# ===================== LOGS Y TEMPORALES =====================
+*.log
+*.tmp
+*.temp
+
+# ===================== CARPETAS COMUNES A IGNORAR =====================
+
+# Si en algún momento usás Node (npm install, etc.)
+node_modules/
+package-lock.json
+
+# Si usás algun bundler como Vite o Webpack
+dist/
+build/
