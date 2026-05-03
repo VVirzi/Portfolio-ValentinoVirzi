@@ -1,5 +1,6 @@
 /* ===================== GOOGLE FONTS ===================== */
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bagel+Fat+One&display=swap');
 
 /* ===================== RESET & BASE ===================== */
 *, *::before, *::after {
@@ -47,7 +48,7 @@ body {
   align-items: center;
   justify-content: space-between;
   padding: 0.7rem 1.2rem 0.7rem 1.5rem;
-  background: rgba(234, 231, 220, 0.92);
+  background: rgb(255, 255, 255);
   border: 1px solid var(--color-border);
   border-radius: var(--radius-nav);
   backdrop-filter: blur(10px);
@@ -128,7 +129,7 @@ body {
 }
 
 .hero-eyebrow {
-  font-size: 0.78rem;
+  font-size: 1rem;
   font-weight: 600;
   letter-spacing: 0.22em;
   text-transform: uppercase;
@@ -138,8 +139,10 @@ body {
 
 .hero-name {
   font-size: clamp(3.2rem, 8vw, 7rem);
-  line-height: 1.03;
-  font-weight: 800;
+  line-height: 1.05;
+  font-weight: 500;
+  font-family: 'Bagel Fat One', serif;
+  text-transform: uppercase;
   color: var(--color-text);
   margin-bottom: 1.5rem;
   letter-spacing: -0.02em;
