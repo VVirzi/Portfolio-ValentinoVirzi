@@ -223,11 +223,12 @@ section {
 
 .section-title {
   font-size: clamp(1.8rem, 4vw, 2.6rem);
-  font-weight: 800;
+  font-weight: 500;
   color: var(--color-text);
   margin-bottom: 2.5rem;
   line-height: 1.1;
-  letter-spacing: -0.02em;
+  letter-spacing: 0.01em;
+  font-family: 'Bagel Fat One', serif;
 }
 
 .section-subtitle {
@@ -238,21 +239,30 @@ section {
 }
 
 /* ===================== SOBRE MÍ ===================== */
+#sobre-mi {
+  background-color: var(--color-accent);
+}
+
+#sobre-mi .section-title{
+  color: var(--color-white)
+}
+
 .sobre-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 5rem;
   align-items: start;
+  color: var(--color-bg)
 }
 
 .sobre-texto p {
   margin-bottom: 1rem;
-  color: #3a3a3a;
+  color: var(--color-white)
   font-size: 0.97rem;
 }
 
 .sobre-texto strong {
-  color: var(--color-accent);
+  color: var(--color-white);
   font-weight: 600;
 }
 
@@ -263,29 +273,30 @@ section {
 }
 
 .dato {
-  border-left: 3px solid var(--color-accent);
+  border-left: 3px solid var(--color-bg);
   padding-left: 1.5rem;
 }
 
 .dato-num {
   display: block;
   font-size: 3rem;
-  font-weight: 800;
-  color: var(--color-accent);
+  font-weight: 500;
+  color: var(--color-white);
   line-height: 1;
-  letter-spacing: -0.03em;
+  letter-spacing: -0.02em;
+  font-family: 'Bagel Fat One', serif;
 }
 
 .dato-label {
   font-size: 0.82rem;
   font-weight: 500;
-  color: var(--color-muted);
+  color: var(--color-accent-light);
   letter-spacing: 0.04em;
 }
 
 /* ===================== HABILIDADES ===================== */
 #habilidades {
-  background-color: var(--color-bg-alt);
+  background-color: var(--color-white);
 }
 
 .skills-grid {
@@ -449,9 +460,12 @@ section {
 
 /* ===================== PROYECTOS ===================== */
 #proyectos {
-  background-color: var(--color-bg-alt);
+  background-color: var(--color-accent);
 }
 
+#proyectos .section-title{
+  color: var(--color-white)
+}
 .proyectos-categoria {
   margin-bottom: 1rem;
 }
@@ -459,14 +473,14 @@ section {
 .categoria-titulo {
   font-size: 1rem;
   font-weight: 700;
-  color: var(--color-text);
+  color: var(--color-white);
   margin-bottom: 0.4rem;
   letter-spacing: 0.01em;
 }
 
 .categoria-subtitulo {
   font-size: 0.85rem;
-  color: var(--color-muted);
+  color: var(--color-bg);
   margin-bottom: 1.8rem;
 }
 
@@ -494,8 +508,8 @@ section {
 }
 
 .proyecto-estrella {
-  border-color: var(--color-accent);
-  border-width: 2px;
+  border-color: var(--color-accent-dark);
+  border-width: 3px;
 }
 
 .proyecto-estrella-badge {
@@ -527,6 +541,10 @@ section {
 }
 
 /* ===================== CONTACTO ===================== */
+#contacto .section-title{
+  color: var(--color-accent-dark)
+}
+
 .contacto-inner {
   text-align: center;
 }
