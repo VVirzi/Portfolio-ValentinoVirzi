@@ -1110,3 +1110,68 @@ footer {
   border-radius: 999px;
   letter-spacing: 0.05em;
 }
+
+/* ===================== SKILLS - BLOQUES ===================== */
+.skills-bloque {
+  margin-bottom: 1rem;
+}
+
+.skills-bloque-titulo {
+  font-size: 0.85rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--color-accent);
+  margin-bottom: 2rem;
+}
+
+.skills-divisor {
+  border: none;
+  border-top: 1px solid var(--color-border);
+  margin: 3rem 0;
+}
+
+/* ===================== SOFT SKILLS CARDS ===================== */
+.soft-skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.2rem;
+}
+
+.soft-skill-card {
+  background: var(--color-white);
+  border: 1px solid var(--color-border);
+  border-radius: 16px;
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  transition: transform 0.22s, box-shadow 0.22s;
+}
+
+.soft-skill-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 24px rgba(10, 100, 83, 0.1);
+}
+
+.soft-skill-icon {
+  font-size: 1.5rem;
+  line-height: 1;
+}
+
+.soft-skill-card h4 {
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: var(--color-text);
+}
+
+.soft-skill-card p {
+  font-size: 0.83rem;
+  color: var(--color-muted);
+  line-height: 1.6;
+}
+
+[data-theme="dark"] .soft-skill-card {
+  background: var(--color-white);
+  border-color: var(--color-border);
+}
