@@ -20,12 +20,60 @@ window.addEventListener('scroll', () => {
   });
 });
 
+// ===================== DARK MODE =====================
+const darkBtn = document.getElementById('dark-toggle');
+
+function setDark(on) {
+  document.documentElement.setAttribute('data-theme', on ? 'dark' : 'light');
+  darkBtn.textContent = on ? '☀️' : '🌙';
+  localStorage.setItem('theme', on ? 'dark' : 'light');
+}
+
+// Default siempre claro — solo oscuro si el usuario lo guardó explícitamente
+const savedTheme = localStorage.getItem('theme');
+setDark(savedTheme === 'dark');
+
+darkBtn.addEventListener('click', () => {
+  const isDark = document.documentElement.getAttribute('data-theme') === 'dark';
+  setDark(!isDark);
+});
+
+// ===================== IDIOMA =====================
+const langBtn = document.getElementById('lang-toggle');
+let currentLang = localStorage.getItem('lang') || 'en';
+
+function traducirElementos(contenedor) {
+  const scope = contenedor || document;
+  scope.querySelectorAll('[data-en]').forEach(el => {
+    const text = currentLang === 'en'
+      ? el.getAttribute('data-en')
+      : el.getAttribute('data-es');
+    if (text) el.innerHTML = text;
+  });
+}
+
+function setLang(lang) {
+  currentLang = lang;
+  localStorage.setItem('lang', lang);
+  document.documentElement.setAttribute('lang', lang);
+  langBtn.textContent = lang === 'en' ? 'ES' : 'EN';
+  traducirElementos();
+}
+
+setLang(currentLang);
+
+langBtn.addEventListener('click', () => {
+  setLang(currentLang === 'en' ? 'es' : 'en');
+});
+
 // ===================== MODALES =====================
 function abrirModal(id) {
   const modal = document.getElementById(id);
   if (modal) {
     modal.classList.add('activo');
     document.body.style.overflow = 'hidden';
+    // Traducir el contenido del modal al idioma actual al abrirlo
+    traducirElementos(modal);
   }
 }
 
@@ -50,53 +98,6 @@ document.addEventListener('keydown', (e) => {
   }
 });
 
-// ===================== DARK MODE =====================
-const darkBtn = document.getElementById('dark-toggle');
-const prefersDark = window.matchMedia('(prefers-color-scheme: dark)');
-
-function setDark(on) {
-  document.documentElement.setAttribute('data-theme', on ? 'dark' : 'light');
-  darkBtn.textContent = on ? '☀️' : '🌙';
-  localStorage.setItem('theme', on ? 'dark' : 'light');
-}
-
-// Cargar preferencia guardada (o del sistema si no hay)
-const savedTheme = localStorage.getItem('theme');
-if (savedTheme) {
-  setDark(savedTheme === 'dark');
-} else {
-  setDark(prefersDark.matches);
-}
-
-darkBtn.addEventListener('click', () => {
-  const isDark = document.documentElement.getAttribute('data-theme') === 'dark';
-  setDark(!isDark);
-});
-
-// ===================== IDIOMA =====================
-const langBtn = document.getElementById('lang-toggle');
-let currentLang = localStorage.getItem('lang') || 'en';
-
-function setLang(lang) {
-  currentLang = lang;
-  localStorage.setItem('lang', lang);
-  document.documentElement.setAttribute('lang', lang);
-  langBtn.textContent = lang === 'en' ? 'ES' : 'EN';
-
-  // Traducir todos los elementos con data-en / data-es
-  document.querySelectorAll('[data-en]').forEach(el => {
-    const text = lang === 'en' ? el.getAttribute('data-en') : el.getAttribute('data-es');
-    if (text) el.innerHTML = text;
-  });
-}
-
-// Aplicar idioma al cargar
-setLang(currentLang);
-
-langBtn.addEventListener('click', () => {
-  setLang(currentLang === 'en' ? 'es' : 'en');
-});
-
 // ===================== ANIMACIONES DE ENTRADA =====================
 const observerOptions = {
   threshold: 0.12,
@@ -112,7 +113,6 @@ const observer = new IntersectionObserver((entries) => {
   });
 }, observerOptions);
 
-// Elementos que se animan al entrar en viewport
 document.querySelectorAll([
   '.hero-content',
   '.hero-foto-wrap',
