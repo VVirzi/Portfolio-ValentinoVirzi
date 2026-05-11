@@ -135,3 +135,17 @@ document.querySelectorAll([
 document.querySelectorAll('.proyecto-card, .skill-group').forEach((el, i) => {
   el.style.transitionDelay = `${(i % 4) * 80}ms`;
 });
+
+// ===================== CARRUSEL =====================
+function moverCarrusel(carruselId, direccion) {
+  const carrusel = document.getElementById(carruselId);
+  const imgs = carrusel.querySelectorAll('.carrusel-img');
+  const contador = document.getElementById('contador-' + carruselId);
+  let actual = Array.from(imgs).findIndex(img => img.classList.contains('active'));
+
+  imgs[actual].classList.remove('active');
+  actual = (actual + direccion + imgs.length) % imgs.length;
+  imgs[actual].classList.add('active');
+
+  if (contador) contador.textContent = `${actual + 1} / ${imgs.length}`;
+}
