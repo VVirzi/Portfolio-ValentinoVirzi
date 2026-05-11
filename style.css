@@ -1175,3 +1175,52 @@ footer {
   background: var(--color-white);
   border-color: var(--color-border);
 }
+
+/* ===================== BOTÓN DESCARGA CV ===================== */
+.hero-cv-btn {
+  padding: 0.8rem 2rem;
+  font-size: 0.82rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  cursor: pointer;
+  text-decoration: none;
+  border-radius: 999px;
+  transition: all 0.2s;
+  font-family: 'Inter', sans-serif;
+  background: transparent;
+  color: var(--color-muted);
+  border: 2px dashed var(--color-border);
+}
+
+.hero-cv-btn:hover {
+  border-color: var(--color-accent);
+  color: var(--color-accent);
+  background: var(--color-accent-light);
+}
+
+.contacto-cv-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  text-decoration: none;
+  font-size: 0.9rem;
+  font-weight: 600;
+  padding: 0.75rem 2rem;
+  border-radius: 999px;
+  border: 2px solid var(--color-accent);
+  color: var(--color-accent);
+  margin-top: 0.5rem;
+  transition: all 0.2s;
+  letter-spacing: 0.05em;
+}
+
+.contacto-cv-btn::before {
+  content: "↓";
+  font-size: 1rem;
+}
+
+.contacto-cv-btn:hover {
+  background: var(--color-accent);
+  color: #fff;
+}
