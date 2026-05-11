@@ -1011,6 +1011,8 @@ footer {
   --color-muted: #9a9690;
   --color-border: #2e2e2e;
   --color-white: #1e1e1e;
+  --color-accent: #12a07e;
+  --color-accent-dark: #0e7d63;
   --color-accent-light: #0d3d32;
   --color-tag-bg: #252525;
 }
