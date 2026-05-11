@@ -258,7 +258,7 @@ section {
 
 .sobre-texto p {
   margin-bottom: 1rem;
-  color: var(--color-white)
+  color: var(--color-white);
   font-size: 0.97rem;
 }
 
@@ -714,17 +714,27 @@ footer {
 
 /* ===================== RESPONSIVE ===================== */
 @media (max-width: 768px) {
+  /* Navbar: logo + botón visibles, links ocultos */
   #navbar {
     top: 0.8rem;
     min-width: unset;
     width: calc(100% - 2rem);
-    padding: 0.7rem 1rem;
+    padding: 0.65rem 0.8rem 0.65rem 1.2rem;
+    justify-content: space-between;
+    gap: 0;
   }
 
   .nav-links {
     display: none;
   }
 
+  .nav-cta {
+    display: block;
+    font-size: 0.72rem;
+    padding: 0.5rem 1rem;
+  }
+
+  /* Hero */
   #hero {
     padding: 7rem 1.5rem 4rem;
   }
@@ -733,6 +743,18 @@ footer {
     display: none;
   }
 
+  .hero-tagline {
+    font-size: 0.97rem;
+  }
+
+  /* Tags: nunca parten en dos líneas */
+  .tag {
+    white-space: nowrap;
+    font-size: 0.72rem;
+    padding: 0.25rem 0.65rem;
+  }
+
+  /* Grillas */
   .sobre-grid {
     grid-template-columns: 1fr;
     gap: 2.5rem;
@@ -747,11 +769,22 @@ footer {
     grid-template-columns: 1fr;
   }
 
+  .proyectos-grid {
+    grid-template-columns: 1fr;
+  }
+
   section {
     padding: 3.5rem 1.5rem;
   }
 
+  /* Modal */
+  .modal {
+    padding: 1rem;
+  }
+
   .modal-box {
-    padding: 2rem 1.5rem;
+    padding: 2rem 1.2rem;
+    border-radius: 16px;
+    max-height: 92vh;
   }
 }
