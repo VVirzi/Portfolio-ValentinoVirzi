@@ -149,3 +149,16 @@ function moverCarrusel(carruselId, direccion) {
 
   if (contador) contador.textContent = `${actual + 1} / ${imgs.length}`;
 }
+
+// ===================== MENÚ HAMBURGUESA (mobile) =====================
+function toggleMenu() {
+  const links = document.querySelector('.nav-links');
+  links.classList.toggle('abierto');
+}
+
+// Cerrar menú al hacer click en un link
+document.querySelectorAll('.nav-links a').forEach(link => {
+  link.addEventListener('click', () => {
+    document.querySelector('.nav-links').classList.remove('abierto');
+  });
+});
