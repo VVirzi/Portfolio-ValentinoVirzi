@@ -12,20 +12,38 @@
   <nav id="navbar">
     <ul class="nav-links">
       <li><a href="#sobre-mi" data-en="About me" data-es="Sobre mí">About me</a></li>
-      <li><a href="#habilidades" data-en="Skills" data-es="Habilidades">Skills</a></li>      <li><a href="#experiencia" data-en="Experience" data-es="Experiencia">Experience</a></li>
+      <li><a href="#habilidades" data-en="Skills" data-es="Habilidades">Skills</a></li>
+      <li><a href="#experiencia" data-en="Experience" data-es="Experiencia">Experience</a></li>
       <li><a href="#proyectos" data-en="Projects" data-es="Proyectos">Projects</a></li>
       <li><a href="#contacto" data-en="Contact" data-es="Contacto">Contact</a></li>
     </ul>
     <div class="nav-controls">
       <button class="nav-btn" id="lang-toggle" title="Switch language">ES</button>
       <button class="nav-btn" id="dark-toggle" title="Toggle dark mode">🌙</button>
-      <button class="nav-hamburguesa" id="hamburguesa" title="Menu" onclick="toggleMenu()">
-        <span></span>
-        <span></span>
-        <span></span>
-      </button>
     </div>
   </nav>
+
+  <!-- Controles flotantes mobile (esquina superior derecha) -->
+  <div class="mobile-controls" id="mobile-controls">
+    <button class="mobile-btn mobile-btn-menu" id="hamburguesa" onclick="toggleMenu()" title="Menu">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+    <button class="mobile-btn" id="lang-toggle-mobile" onclick="toggleLangMobile()">ES</button>
+    <button class="mobile-btn" id="dark-toggle-mobile" onclick="toggleDarkMobile()">🌙</button>
+  </div>
+
+  <!-- Menú mobile desplegable -->
+  <div id="mobile-menu" class="mobile-menu">
+    <ul>
+      <li><a href="#sobre-mi" onclick="cerrarMenuMobile()" data-en="About me" data-es="Sobre mí">About me</a></li>
+      <li><a href="#habilidades" onclick="cerrarMenuMobile()" data-en="Skills" data-es="Habilidades">Skills</a></li>
+      <li><a href="#experiencia" onclick="cerrarMenuMobile()" data-en="Experience" data-es="Experiencia">Experience</a></li>
+      <li><a href="#proyectos" onclick="cerrarMenuMobile()" data-en="Projects" data-es="Proyectos">Projects</a></li>
+      <li><a href="#contacto" onclick="cerrarMenuMobile()" data-en="Contact" data-es="Contacto">Contact</a></li>
+    </ul>
+  </div>
 
   <!-- ===================== HERO ===================== -->
   <section id="hero">

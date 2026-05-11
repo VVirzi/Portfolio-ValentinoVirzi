@@ -162,3 +162,45 @@ document.querySelectorAll('.nav-links a').forEach(link => {
     document.querySelector('.nav-links').classList.remove('abierto');
   });
 });
+
+// ===================== MOBILE CONTROLS =====================
+function toggleMenu() {
+  const menu = document.getElementById('mobile-menu');
+  menu.classList.toggle('abierto');
+}
+
+function cerrarMenuMobile() {
+  document.getElementById('mobile-menu').classList.remove('abierto');
+}
+
+// Sincronizar botones mobile con los de desktop
+function toggleLangMobile() {
+  setLang(currentLang === 'en' ? 'es' : 'en');
+  // Sincronizar texto del botón mobile
+  document.getElementById('lang-toggle-mobile').textContent =
+    currentLang === 'en' ? 'ES' : 'EN';
+}
+
+function toggleDarkMobile() {
+  const isDark = document.documentElement.getAttribute('data-theme') === 'dark';
+  setDark(!isDark);
+  document.getElementById('dark-toggle-mobile').textContent = !isDark ? '☀️' : '🌙';
+}
+
+// Cerrar menú al hacer click fuera
+document.addEventListener('click', (e) => {
+  const menu = document.getElementById('mobile-menu');
+  const hamburguesa = document.getElementById('hamburguesa');
+  if (menu && !menu.contains(e.target) && !hamburguesa.contains(e.target)) {
+    menu.classList.remove('abierto');
+  }
+});
+
+// Sincronizar estado inicial de botones mobile con desktop
+window.addEventListener('DOMContentLoaded', () => {
+  const langMobile = document.getElementById('lang-toggle-mobile');
+  const darkMobile = document.getElementById('dark-toggle-mobile');
+  if (langMobile) langMobile.textContent = currentLang === 'en' ? 'ES' : 'EN';
+  if (darkMobile) darkMobile.textContent =
+    localStorage.getItem('theme') === 'dark' ? '☀️' : '🌙';
+});
