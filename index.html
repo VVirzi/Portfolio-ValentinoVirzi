@@ -10,7 +10,6 @@
 
   <!-- ===================== NAVBAR ===================== -->
   <nav id="navbar">
-    <div class="nav-logo">VRV</div>
     <ul class="nav-links">
       <li><a href="#sobre-mi">Sobre mí</a></li>
       <li><a href="#habilidades">Habilidades</a></li>
@@ -18,21 +17,25 @@
       <li><a href="#proyectos">Proyectos</a></li>
       <li><a href="#contacto">Contacto</a></li>
     </ul>
-    <button class="nav-cta" onclick="scrollToSection('contacto')">Contratame</button>
   </nav>
 
   <!-- ===================== HERO ===================== -->
   <section id="hero">
-    <div class="hero-content">
-      <p class="hero-eyebrow">Backend Developer - .NET / C#</p>
-      <h1 class="hero-name">Valentino<br>Román Virzi</h1>
-      <p class="hero-tagline">
-        Construyo sistemas robustos y escalables.<br>
-        Especializado en C#, .NET Core, ASP.NET y SQL Server.
-      </p>
-      <div class="hero-actions">
-        <button onclick="scrollToSection('proyectos')">Ver proyectos</button>
-        <a href="#contacto">Hablemos</a>
+    <div class="hero-inner">
+      <div class="hero-content">
+        <p class="hero-eyebrow">Backend Developer - .NET / C#</p>
+        <h1 class="hero-name">Valentino<br>Román Virzi</h1>
+        <p class="hero-tagline">
+          Construyo sistemas robustos y escalables.<br>
+          Especializado en C#, .NET Core, ASP.NET y SQL Server.
+        </p>
+        <div class="hero-actions">
+          <button onclick="scrollToSection('proyectos')">Ver proyectos</button>
+          <a href="#contacto">Hablemos</a>
+        </div>
+      </div>
+      <div class="hero-foto-wrap">
+        <img src="assets/img/foto-perfil.png" alt="Valentino Román Virzi" class="hero-foto" />
       </div>
     </div>
     <div class="hero-location">Buenos Aires, Argentina</div>
@@ -469,6 +472,9 @@
         <span class="tag highlight">C#</span><span class="tag">POO</span><span class="tag">Factory</span><span class="tag">Singleton</span><span class="tag">Object Pool</span>
       </div>
       <h2>Sistema Arcade en C#</h2>
+      <div class="modal-video">
+        <iframe src="https://www.youtube.com/embed/rQyCSWRXQJA" title="Sistema Arcade C# gameplay" frameborder="0" allowfullscreen></iframe>
+      </div>
       <p>
         Simulación de un juego de carnaval desarrollada <strong>íntegramente en C#</strong>, sin motor gráfico.
         Fue el proyecto donde apliqué herencia y aprendí sobre interfaces por primera vez.
@@ -479,7 +485,9 @@
         También incluye <strong>pruebas unitarias</strong> para validar el comportamiento del sistema.
       </p>
       <div class="modal-footer">
-        <span class="modal-estado">Repositorio privado · Próximamente público</span>
+        <div class="modal-links">
+          <a href="https://github.com/Fbulga/Paradigmas" target="_blank" class="modal-link">⌥ Ver repositorio</a>
+        </div>
       </div>
     </div>
   </div>
