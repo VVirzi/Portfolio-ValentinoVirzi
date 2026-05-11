@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -11,69 +11,68 @@
   <!-- ===================== NAVBAR ===================== -->
   <nav id="navbar">
     <ul class="nav-links">
-      <li><a href="#sobre-mi">Sobre mí</a></li>
-      <li><a href="#habilidades">Habilidades</a></li>
-      <li><a href="#experiencia">Experiencia</a></li>
-      <li><a href="#proyectos">Proyectos</a></li>
-      <li><a href="#contacto">Contacto</a></li>
+      <li><a href="#sobre-mi" data-en="About" data-es="Sobre mí">About</a></li>
+      <li><a href="#habilidades" data-en="Skills" data-es="Habilidades">Skills</a></li>
+      <li><a href="#experiencia" data-en="Experience" data-es="Experiencia">Experience</a></li>
+      <li><a href="#proyectos" data-en="Projects" data-es="Proyectos">Projects</a></li>
+      <li><a href="#contacto" data-en="Contact" data-es="Contacto">Contact</a></li>
     </ul>
+    <div class="nav-controls">
+      <button class="nav-btn" id="lang-toggle" title="Switch language">ES</button>
+      <button class="nav-btn" id="dark-toggle" title="Toggle dark mode">🌙</button>
+    </div>
   </nav>
 
   <!-- ===================== HERO ===================== -->
   <section id="hero">
     <div class="hero-inner">
       <div class="hero-content">
-        <p class="hero-eyebrow">Backend Developer - .NET / C#</p>
+        <p class="hero-eyebrow">Backend Developer · .NET / C#</p>
         <h1 class="hero-name">Valentino<br>Román Virzi</h1>
         <p class="hero-tagline">
-          Construyo sistemas robustos y escalables.<br>
-          Especializado en C#, .NET Core, ASP.NET y SQL Server.
+          <span data-en="I build robust and scalable systems." data-es="Construyo sistemas robustos y escalables.">I build robust and scalable systems.</span><br>
+          <span data-en="Specialized in C#, .NET Core, ASP.NET and SQL Server." data-es="Especializado en C#, .NET Core, ASP.NET y SQL Server.">Specialized in C#, .NET Core, ASP.NET and SQL Server.</span>
         </p>
         <div class="hero-actions">
-          <button onclick="scrollToSection('proyectos')">Ver proyectos</button>
-          <a href="#contacto">Hablemos</a>
+          <button onclick="scrollToSection('proyectos')" data-en="View projects" data-es="Ver proyectos">View projects</button>
+          <a href="#contacto" data-en="Let's talk" data-es="Hablemos">Let's talk</a>
         </div>
       </div>
       <div class="hero-foto-wrap">
         <img src="assets/img/foto-perfil.png" alt="Valentino Román Virzi" class="hero-foto" />
       </div>
     </div>
-    <div class="hero-location">Buenos Aires, Argentina</div>
+    <div class="hero-location" data-en="Buenos Aires, Argentina" data-es="Buenos Aires, Argentina">Buenos Aires, Argentina</div>
   </section>
 
   <!-- ===================== SOBRE MÍ ===================== -->
   <section id="sobre-mi">
     <div class="section-inner">
-      <h2 class="section-title">Sobre mí</h2>
+      <h2 class="section-title" data-en="About me" data-es="Sobre mí">About me</h2>
       <div class="sobre-grid">
         <div class="sobre-texto">
-          <p>
-            Soy desarrollador backend junior especializado en <strong>C# y .NET</strong>,
-            con sólidos conocimientos en programación orientada a objetos, estructuras de datos
-            y patrones de diseño.
+          <p data-en="I'm a junior backend developer specialized in <strong>C# and .NET</strong>, with solid knowledge in object-oriented programming, data structures and design patterns." data-es="Soy desarrollador backend junior especializado en <strong>C# y .NET</strong>, con sólidos conocimientos en programación orientada a objetos, estructuras de datos y patrones de diseño.">
+            I'm a junior backend developer specialized in <strong>C# and .NET</strong>, with solid knowledge in object-oriented programming, data structures and design patterns.
           </p>
-          <p>
-            Actualmente me desempeño como <strong>Responsable de Sistemas y Telecomunicaciones</strong>
-            en Ital Farma S.A., liderando proyectos IT e infraestructura en un entorno corporativo exigente.
+          <p data-en="I currently work as <strong>Head of Systems and Telecommunications</strong> at Ital Farma S.A., leading IT and infrastructure projects in a demanding corporate environment." data-es="Actualmente me desempeño como <strong>Responsable de Sistemas y Telecomunicaciones</strong> en Ital Farma S.A., liderando proyectos IT e infraestructura en un entorno corporativo exigente.">
+            I currently work as <strong>Head of Systems and Telecommunications</strong> at Ital Farma S.A., leading IT and infrastructure projects in a demanding corporate environment.
           </p>
-          <p>
-            Mi background en desarrollo de videojuegos me dio una base técnica sólida en arquitectura de software,
-            patrones de diseño y resolución de problemas complejos. Hoy aplico esa misma mentalidad
-            construyendo <strong>APIs REST, aplicaciones empresariales y sistemas backend</strong> con ASP.NET Core y SQL Server.
+          <p data-en="My background in game development gave me a strong technical foundation in software architecture, design patterns and complex problem-solving. I now apply that same mindset building <strong>REST APIs, enterprise applications and backend systems</strong> with ASP.NET Core and SQL Server." data-es="Mi background en desarrollo de videojuegos me dio una base técnica sólida en arquitectura de software, patrones de diseño y resolución de problemas complejos. Hoy aplico esa misma mentalidad construyendo <strong>APIs REST, aplicaciones empresariales y sistemas backend</strong> con ASP.NET Core y SQL Server.">
+            My background in game development gave me a strong technical foundation in software architecture, design patterns and complex problem-solving. I now apply that same mindset building <strong>REST APIs, enterprise applications and backend systems</strong> with ASP.NET Core and SQL Server.
           </p>
         </div>
         <div class="sobre-datos">
           <div class="dato">
             <span class="dato-num">3+</span>
-            <span class="dato-label">Años de experiencia IT</span>
+            <span class="dato-label" data-en="Years of IT experience" data-es="Años de experiencia IT">Years of IT experience</span>
           </div>
           <div class="dato">
             <span class="dato-num">10+</span>
-            <span class="dato-label">Proyectos desarrollados</span>
+            <span class="dato-label" data-en="Projects developed" data-es="Proyectos desarrollados">Projects developed</span>
           </div>
           <div class="dato">
             <span class="dato-num">97%</span>
-            <span class="dato-label">Reducción de tiempo en proceso clave</span>
+            <span class="dato-label" data-en="Time reduction in a key process" data-es="Reducción de tiempo en proceso clave">Time reduction in a key process</span>
           </div>
         </div>
       </div>
@@ -83,11 +82,11 @@
   <!-- ===================== HABILIDADES ===================== -->
   <section id="habilidades">
     <div class="section-inner">
-      <h2 class="section-title">Stack técnico</h2>
+      <h2 class="section-title" data-en="Tech Stack" data-es="Stack técnico">Tech Stack</h2>
       <div class="skills-grid">
 
         <div class="skill-group">
-          <h3>Principal</h3>
+          <h3 data-en="Core" data-es="Principal">Core</h3>
           <div class="skill-tags">
             <span class="tag highlight">C#</span>
             <span class="tag highlight">.NET Core</span>
@@ -101,14 +100,14 @@
           <div class="skill-tags">
             <span class="tag">REST APIs</span>
             <span class="tag">SOLID</span>
-            <span class="tag">Arquitectura en capas</span>
+            <span class="tag" data-en="Layered Architecture" data-es="Arquitectura en capas">Layered Architecture</span>
             <span class="tag">Design Patterns</span>
             <span class="tag">DTOs</span>
           </div>
         </div>
 
         <div class="skill-group">
-          <h3>Patrones de diseño</h3>
+          <h3 data-en="Design Patterns" data-es="Patrones de diseño">Design Patterns</h3>
           <div class="skill-tags">
             <span class="tag">Singleton</span>
             <span class="tag">Factory</span>
@@ -121,17 +120,17 @@
         </div>
 
         <div class="skill-group">
-          <h3>Lenguajes</h3>
+          <h3 data-en="Languages" data-es="Lenguajes">Languages</h3>
           <div class="skill-tags">
             <span class="tag">SQL</span>
-            <span class="tag">Python (básico)</span>
-            <span class="tag">Java (básico)</span>
-            <span class="tag">JavaScript (básico)</span>
+            <span class="tag" data-en="Python (basic)" data-es="Python (básico)">Python (basic)</span>
+            <span class="tag" data-en="Java (basic)" data-es="Java (básico)">Java (basic)</span>
+            <span class="tag" data-en="JavaScript (basic)" data-es="JavaScript (básico)">JavaScript (basic)</span>
           </div>
         </div>
 
         <div class="skill-group">
-          <h3>Herramientas</h3>
+          <h3 data-en="Tools" data-es="Herramientas">Tools</h3>
           <div class="skill-tags">
             <span class="tag">Git</span>
             <span class="tag">GitHub</span>
@@ -143,12 +142,12 @@
         </div>
 
         <div class="skill-group">
-          <h3>IT / Infraestructura</h3>
+          <h3 data-en="IT / Infrastructure" data-es="IT / Infraestructura">IT / Infrastructure</h3>
           <div class="skill-tags">
-            <span class="tag">Soporte técnico</span>
-            <span class="tag">Capacitaciones</span>
-            <span class="tag">Redes</span>
-            <span class="tag">Servidores</span>
+            <span class="tag" data-en="Tech Support" data-es="Soporte técnico">Tech Support</span>
+            <span class="tag" data-en="Training" data-es="Capacitaciones">Training</span>
+            <span class="tag" data-en="Networks" data-es="Redes">Networks</span>
+            <span class="tag" data-en="Servers" data-es="Servidores">Servers</span>
           </div>
         </div>
 
@@ -159,47 +158,47 @@
   <!-- ===================== EXPERIENCIA ===================== -->
   <section id="experiencia">
     <div class="section-inner">
-      <h2 class="section-title">Experiencia</h2>
+      <h2 class="section-title" data-en="Experience" data-es="Experiencia">Experience</h2>
       <div class="timeline">
 
         <div class="timeline-item">
-          <div class="timeline-fecha">Jun 2025 — Actualidad</div>
+          <div class="timeline-fecha" data-en="Jun 2025 — Present" data-es="Jun 2025 — Actualidad">Jun 2025 — Present</div>
           <div class="timeline-contenido">
-            <h3>Responsable de Sistemas y Telecomunicaciones</h3>
+            <h3 data-en="Head of Systems and Telecommunications" data-es="Responsable de Sistemas y Telecomunicaciones">Head of Systems and Telecommunications</h3>
             <p class="timeline-empresa">Ital Farma S.A.</p>
             <ul>
-              <li>Definición y ejecución de estrategia de sistemas y telecomunicaciones</li>
-              <li>Coordinación de proyectos IT e implementación de nuevas tecnologías</li>
-              <li>Administración de servidores, software base y operaciones críticas</li>
-              <li>Gestión de seguridad informática: usuarios, accesos e información</li>
-              <li>Supervisión de infraestructura tecnológica y proveedores</li>
+              <li data-en="Definition and execution of systems and telecommunications strategy" data-es="Definición y ejecución de estrategia de sistemas y telecomunicaciones">Definition and execution of systems and telecommunications strategy</li>
+              <li data-en="Coordination of IT projects and implementation of new technologies" data-es="Coordinación de proyectos IT e implementación de nuevas tecnologías">Coordination of IT projects and implementation of new technologies</li>
+              <li data-en="Administration of servers, base software and critical operations" data-es="Administración de servidores, software base y operaciones críticas">Administration of servers, base software and critical operations</li>
+              <li data-en="IT security management: users, access and information" data-es="Gestión de seguridad informática: usuarios, accesos e información">IT security management: users, access and information</li>
+              <li data-en="Supervision of technological infrastructure and vendors" data-es="Supervisión de infraestructura tecnológica y proveedores">Supervision of technological infrastructure and vendors</li>
             </ul>
-            <p class="timeline-logro">✦ Optimización de procesos IT e implementación de mejoras en infraestructura tecnológica</p>
+            <p class="timeline-logro" data-en="✦ IT process optimization and improvements in technological infrastructure" data-es="✦ Optimización de procesos IT e implementación de mejoras en infraestructura tecnológica">✦ IT process optimization and improvements in technological infrastructure</p>
           </div>
         </div>
 
         <div class="timeline-item">
           <div class="timeline-fecha">Oct 2024 — Jun 2025</div>
           <div class="timeline-contenido">
-            <h3>Analista de Sistemas</h3>
+            <h3 data-en="Systems Analyst" data-es="Analista de Sistemas">Systems Analyst</h3>
             <p class="timeline-empresa">Ital Farma S.A.</p>
             <ul>
-              <li>Soporte técnico a usuarios: hardware, software y redes</li>
-              <li>Resolución de incidentes y troubleshooting</li>
-              <li>Mantenimiento de equipos e impresoras</li>
+              <li data-en="Technical support to users: hardware, software and networks" data-es="Soporte técnico a usuarios: hardware, software y redes">Technical support to users: hardware, software and networks</li>
+              <li data-en="Incident resolution and troubleshooting" data-es="Resolución de incidentes y troubleshooting">Incident resolution and troubleshooting</li>
+              <li data-en="Equipment and printer maintenance" data-es="Mantenimiento de equipos e impresoras">Equipment and printer maintenance</li>
             </ul>
           </div>
         </div>
 
         <div class="timeline-item">
-          <div class="timeline-fecha">Abr 2023 — Sep 2024</div>
+          <div class="timeline-fecha" data-en="Apr 2023 — Sep 2024" data-es="Abr 2023 — Sep 2024">Apr 2023 — Sep 2024</div>
           <div class="timeline-contenido">
-            <h3>Pasante IT</h3>
+            <h3 data-en="IT Intern" data-es="Pasante IT">IT Intern</h3>
             <p class="timeline-empresa">Gate Gourmet SRL</p>
             <ul>
-              <li>Resolución de incidentes técnicos en entorno corporativo</li>
-              <li>Instalación y configuración de equipos</li>
-              <li>Soporte en redes e infraestructura · Gestión de inventario</li>
+              <li data-en="Technical incident resolution in corporate environment" data-es="Resolución de incidentes técnicos en entorno corporativo">Technical incident resolution in corporate environment</li>
+              <li data-en="Equipment installation and configuration" data-es="Instalación y configuración de equipos">Equipment installation and configuration</li>
+              <li data-en="Network and infrastructure support · Inventory management" data-es="Soporte en redes e infraestructura · Gestión de inventario">Network and infrastructure support · Inventory management</li>
             </ul>
           </div>
         </div>
@@ -207,16 +206,16 @@
       </div>
 
       <div class="educacion">
-        <h2 class="section-title" style="margin-top: 3rem;">Educación</h2>
+        <h2 class="section-title" style="margin-top: 3rem;" data-en="Education" data-es="Educación">Education</h2>
         <div class="edu-grid">
           <div class="edu-item">
-            <h3>Lic. en Desarrollo de Videojuegos</h3>
+            <h3 data-en="B.S. in Video Game Development" data-es="Lic. en Desarrollo de Videojuegos">B.S. in Video Game Development</h3>
             <p>UADE · 2022 – 2025</p>
-            <span class="badge">Título intermedio: Técnico 2025</span>
+            <span class="badge" data-en="Intermediate degree: Technician 2025" data-es="Título intermedio: Técnico 2025">Intermediate degree: Technician 2025</span>
           </div>
           <div class="edu-item">
-            <h3>Ingeniería Informática</h3>
-            <p>UADE · 2021 – 2022 (retomando)</p>
+            <h3 data-en="Computer Engineering" data-es="Ingeniería Informática">Computer Engineering</h3>
+            <p data-en="UADE · 2021 – 2022 (resuming)" data-es="UADE · 2021 – 2022 (retomando)">UADE · 2021 – 2022 (resuming)</p>
           </div>
         </div>
       </div>
@@ -227,16 +226,16 @@
   <!-- ===================== PROYECTOS ===================== -->
   <section id="proyectos">
     <div class="section-inner">
-      <h2 class="section-title">Proyectos</h2>
+      <h2 class="section-title" data-en="Projects" data-es="Proyectos">Projects</h2>
 
       <!-- CATEGORÍA: BACKEND / APPS -->
       <div class="proyectos-categoria">
-        <h3 class="categoria-titulo">Desarrollo Backend & Aplicaciones</h3>
-        <p class="categoria-subtitulo">Proyectos donde el foco estuvo en arquitectura, lógica de negocio y código.</p>
+        <h3 class="categoria-titulo" data-en="💻 Backend Development & Applications" data-es="💻 Desarrollo Backend & Aplicaciones">💻 Backend Development & Applications</h3>
+        <p class="categoria-subtitulo" data-en="Projects focused on architecture, business logic and code." data-es="Proyectos donde el foco estuvo en arquitectura, lógica de negocio y código.">Projects focused on architecture, business logic and code.</p>
         <div class="proyectos-grid">
 
           <div class="proyecto-card proyecto-estrella" onclick="abrirModal('modal-expedientes')">
-            <div class="proyecto-estrella-badge">⭐ Destacado</div>
+            <div class="proyecto-estrella-badge" data-en="⭐ Featured" data-es="⭐ Destacado">⭐ Featured</div>
             <div class="proyecto-tags">
               <span class="tag highlight">C#</span>
               <span class="tag highlight">WinForms</span>
@@ -244,8 +243,8 @@
               <span class="tag">PDF</span>
             </div>
             <h3>App Expedientes</h3>
-            <p>Herramienta empresarial que redujo un proceso de 3 horas a 3 minutos. Genera archivos en múltiples formatos para clientes farmacéuticos.</p>
-            <span class="proyecto-cta">Ver detalles →</span>
+            <p data-en="Enterprise tool that reduced a 3-hour process to 3 minutes. Generates files in multiple formats for pharmaceutical clients." data-es="Herramienta empresarial que redujo un proceso de 3 horas a 3 minutos. Genera archivos en múltiples formatos para clientes farmacéuticos.">Enterprise tool that reduced a 3-hour process to 3 minutes. Generates files in multiple formats for pharmaceutical clients.</p>
+            <span class="proyecto-cta" data-en="View details →" data-es="Ver detalles →">View details →</span>
           </div>
 
           <div class="proyecto-card" onclick="abrirModal('modal-expedientes-web')">
@@ -256,21 +255,21 @@
               <span class="tag">SQL Server</span>
             </div>
             <h3>App Expedientes Web</h3>
-            <span class="badge-dev">En desarrollo</span>
-            <p>Migración de la aplicación de escritorio a una arquitectura web moderna con APIs REST. Código más robusto y profesional.</p>
-            <span class="proyecto-cta">Ver detalles →</span>
+            <span class="badge-dev" data-en="In development" data-es="En desarrollo">In development</span>
+            <p data-en="Migration of the desktop app to a modern web architecture with REST APIs. More robust and professional code." data-es="Migración de la aplicación de escritorio a una arquitectura web moderna con APIs REST. Código más robusto y profesional.">Migration of the desktop app to a modern web architecture with REST APIs. More robust and professional code.</p>
+            <span class="proyecto-cta" data-en="View details →" data-es="Ver detalles →">View details →</span>
           </div>
 
           <div class="proyecto-card" onclick="abrirModal('modal-arcade')">
             <div class="proyecto-tags">
               <span class="tag highlight">C#</span>
-              <span class="tag">POO</span>
+              <span class="tag">OOP</span>
               <span class="tag">Factory</span>
               <span class="tag">Singleton</span>
             </div>
-            <h3>Sistema Arcade en C#</h3>
-            <p>Juego de carnaval en C# puro. El proyecto donde aprendí herencia, interfaces y apliqué patrones de diseño por primera vez.</p>
-            <span class="proyecto-cta">Ver detalles →</span>
+            <h3 data-en="Arcade System in C#" data-es="Sistema Arcade en C#">Arcade System in C#</h3>
+            <p data-en="Carnival game in pure C#. The project where I first applied inheritance, interfaces and design patterns." data-es="Juego de carnaval en C# puro. El proyecto donde aprendí herencia, interfaces y apliqué patrones de diseño por primera vez.">Carnival game in pure C#. The project where I first applied inheritance, interfaces and design patterns.</p>
+            <span class="proyecto-cta" data-en="View details →" data-es="Ver detalles →">View details →</span>
           </div>
 
           <div class="proyecto-card" onclick="abrirModal('modal-unghost')">
@@ -282,8 +281,8 @@
               <span class="tag">Observer</span>
             </div>
             <h3>Un-Ghost</h3>
-            <p>Prototipo FPS experimental con mecánicas de atracción y combate. El proyecto donde más patrones de diseño apliqué.</p>
-            <span class="proyecto-cta">Ver detalles →</span>
+            <p data-en="Experimental FPS prototype with attraction and combat mechanics. The project where I applied the most design patterns." data-es="Prototipo FPS experimental con mecánicas de atracción y combate. El proyecto donde más patrones de diseño apliqué.">Experimental FPS prototype with attraction and combat mechanics. The project where I applied the most design patterns.</p>
+            <span class="proyecto-cta" data-en="View details →" data-es="Ver detalles →">View details →</span>
           </div>
 
           <div class="proyecto-card" onclick="abrirModal('modal-aplasta')">
@@ -294,8 +293,8 @@
               <span class="tag">Cloud Save</span>
             </div>
             <h3>Aplasta Bichos</h3>
-            <p>Videojuego mobile con guardado en la nube. Aprendí a manejar inputs táctiles y sincronización de datos online.</p>
-            <span class="proyecto-cta">Ver detalles →</span>
+            <p data-en="Mobile game with cloud save. I learned to handle touch inputs and online data sync." data-es="Videojuego mobile con guardado en la nube. Aprendí a manejar inputs táctiles y sincronización de datos online.">Mobile game with cloud save. I learned to handle touch inputs and online data sync.</p>
+            <span class="proyecto-cta" data-en="View details →" data-es="Ver detalles →">View details →</span>
           </div>
 
           <div class="proyecto-card" onclick="abrirModal('modal-mago')">
@@ -306,8 +305,8 @@
               <span class="tag">Object Pool</span>
             </div>
             <h3>Mago Tuccini</h3>
-            <p>Mi primer proyecto en Unity. Un mago que derrota enemigos. Donde todo fue aprendizaje continuo desde cero.</p>
-            <span class="proyecto-cta">Ver detalles →</span>
+            <p data-en="My first Unity project. A wizard defeating enemies. Everything was continuous learning from scratch." data-es="Mi primer proyecto en Unity. Un mago que derrota enemigos. Donde todo fue aprendizaje continuo desde cero.">My first Unity project. A wizard defeating enemies. Everything was continuous learning from scratch.</p>
+            <span class="proyecto-cta" data-en="View details →" data-es="Ver detalles →">View details →</span>
           </div>
 
         </div>
@@ -315,44 +314,44 @@
 
       <!-- CATEGORÍA: ARTE / COLABORACIÓN -->
       <div class="proyectos-categoria" style="margin-top: 4rem;">
-        <h3 class="categoria-titulo">Arte & Colaboración</h3>
-        <p class="categoria-subtitulo">Proyectos donde mi participación fue en el apartado artístico — diseño de personajes, mapas, animaciones y efectos.</p>
+        <h3 class="categoria-titulo" data-en="🎨 Art & Collaboration" data-es="🎨 Arte & Colaboración">🎨 Art & Collaboration</h3>
+        <p class="categoria-subtitulo" data-en="Projects where my role was artistic — character design, maps, animations and effects." data-es="Proyectos donde mi participación fue en el apartado artístico — diseño de personajes, mapas, animaciones y efectos.">Projects where my role was artistic — character design, maps, animations and effects.</p>
         <div class="proyectos-grid">
 
           <div class="proyecto-card" onclick="abrirModal('modal-ekeko')">
             <div class="proyecto-tags">
               <span class="tag">Unity</span>
               <span class="tag">C#</span>
-              <span class="tag">Arte 2D</span>
+              <span class="tag" data-en="2D Art" data-es="Arte 2D">2D Art</span>
               <span class="tag">Roguelike</span>
             </div>
             <h3>Ekeko</h3>
-            <p>Roguelike 2.5D inspirado en la cultura latinoamericana. Desarrollé todos los assets visuales del juego.</p>
-            <span class="proyecto-cta">Ver detalles →</span>
+            <p data-en="2.5D roguelike inspired by Latin American culture. I developed all the visual assets of the game." data-es="Roguelike 2.5D inspirado en la cultura latinoamericana. Desarrollé todos los assets visuales del juego.">2.5D roguelike inspired by Latin American culture. I developed all the visual assets of the game.</p>
+            <span class="proyecto-cta" data-en="View details →" data-es="Ver detalles →">View details →</span>
           </div>
 
           <div class="proyecto-card" onclick="abrirModal('modal-pewpew')">
             <div class="proyecto-tags">
               <span class="tag">Unity</span>
               <span class="tag">C#</span>
-              <span class="tag">Multijugador</span>
-              <span class="tag">Arte</span>
+              <span class="tag" data-en="Multiplayer" data-es="Multijugador">Multiplayer</span>
+              <span class="tag" data-en="Art" data-es="Arte">Art</span>
             </div>
             <h3>Pew Pew Penguins</h3>
-            <p>Multijugador 2v2 de pingüinos. Mi rol fue en arte: personajes, mapa, animaciones y efectos visuales.</p>
-            <span class="proyecto-cta">Ver detalles →</span>
+            <p data-en="2v2 penguin multiplayer. My role was in art: characters, map, animations and visual effects." data-es="Multijugador 2v2 de pingüinos. Mi rol fue en arte: personajes, mapa, animaciones y efectos visuales.">2v2 penguin multiplayer. My role was in art: characters, map, animations and visual effects.</p>
+            <span class="proyecto-cta" data-en="View details →" data-es="Ver detalles →">View details →</span>
           </div>
 
           <div class="proyecto-card" onclick="abrirModal('modal-goose')">
             <div class="proyecto-tags">
               <span class="tag">Unity</span>
               <span class="tag">C#</span>
-              <span class="tag">IA de enemigos</span>
-              <span class="tag">Arte</span>
+              <span class="tag" data-en="Enemy AI" data-es="IA de enemigos">Enemy AI</span>
+              <span class="tag" data-en="Art" data-es="Arte">Art</span>
             </div>
             <h3>Goose Game</h3>
-            <p>Juego de sigilo donde un ladrón roba la banana dorada de un museo custodiado por gansos.</p>
-            <span class="proyecto-cta">Ver detalles →</span>
+            <p data-en="Stealth game where a thief steals the golden banana from a museum guarded by geese." data-es="Juego de sigilo donde un ladrón roba la banana dorada de un museo custodiado por gansos.">Stealth game where a thief steals the golden banana from a museum guarded by geese.</p>
+            <span class="proyecto-cta" data-en="View details →" data-es="Ver detalles →">View details →</span>
           </div>
 
           <div class="proyecto-card" onclick="abrirModal('modal-unreal')">
@@ -361,8 +360,8 @@
               <span class="tag">Blueprints</span>
             </div>
             <h3>Unreal Manor</h3>
-            <p>Mi primer proyecto en Unreal Engine. Aprendí Blueprints, cinemáticas y herramientas procedurales.</p>
-            <span class="proyecto-cta">Ver detalles →</span>
+            <p data-en="My first Unreal Engine project. I learned Blueprints, cinematics and procedural tools." data-es="Mi primer proyecto en Unreal Engine. Aprendí Blueprints, cinemáticas y herramientas procedurales.">My first Unreal Engine project. I learned Blueprints, cinematics and procedural tools.</p>
+            <span class="proyecto-cta" data-en="View details →" data-es="Ver detalles →">View details →</span>
           </div>
 
         </div>
@@ -374,9 +373,9 @@
   <!-- ===================== CONTACTO ===================== -->
   <section id="contacto">
     <div class="section-inner contacto-inner">
-      <h2 class="section-title">Hablemos</h2>
-      <p class="contacto-texto">
-        Estoy abierto a nuevas oportunidades laborales.
+      <h2 class="section-title" data-en="Let's talk" data-es="Hablemos">Let's talk</h2>
+      <p class="contacto-texto" data-en="I'm open to new job opportunities, freelance projects or simply exchanging ideas. Feel free to reach out." data-es="Estoy abierto a nuevas oportunidades laborales, proyectos freelance o simplemente intercambiar ideas. No dudes en escribirme.">
+        I'm open to new job opportunities, freelance projects or simply exchanging ideas. Feel free to reach out.
       </p>
       <div class="contacto-links">
         <a href="mailto:valentinovirzi94@gmail.com" class="contacto-link">
@@ -397,7 +396,7 @@
 
   <!-- ===================== FOOTER ===================== -->
   <footer>
-    <p>© 2025 Valentino Román Virzi · Hecho con HTML, CSS y JS</p>
+    <p data-en="© 2025 Valentino Román Virzi · Built with HTML, CSS & JS" data-es="© 2025 Valentino Román Virzi · Hecho con HTML, CSS y JS">© 2025 Valentino Román Virzi · Built with HTML, CSS & JS</p>
   </footer>
 
   <!-- ==================== MODALES ==================== -->

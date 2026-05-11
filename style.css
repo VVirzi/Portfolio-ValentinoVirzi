@@ -878,3 +878,100 @@ footer {
     max-height: 92vh;
   }
 }
+/* ===================== DARK MODE ===================== */
+[data-theme="dark"] {
+  --color-bg: #141414;
+  --color-bg-alt: #1c1c1c;
+  --color-text: #f0ede6;
+  --color-muted: #9a9690;
+  --color-border: #2e2e2e;
+  --color-white: #1e1e1e;
+  --color-accent-light: #0d3d32;
+  --color-tag-bg: #252525;
+}
+
+[data-theme="dark"] body {
+  background-color: var(--color-bg);
+  color: var(--color-text);
+}
+
+[data-theme="dark"] #navbar {
+  background: rgba(20, 20, 20, 0.92);
+  border-color: var(--color-border);
+}
+
+[data-theme="dark"] .proyecto-card,
+[data-theme="dark"] .edu-item,
+[data-theme="dark"] .modal-box {
+  background: var(--color-white);
+  border-color: var(--color-border);
+}
+
+[data-theme="dark"] .tag {
+  background: #252525;
+  border-color: #3a3a3a;
+  color: var(--color-text);
+}
+
+[data-theme="dark"] .timeline-contenido ul li {
+  color: var(--color-muted);
+}
+
+[data-theme="dark"] .modal-box p {
+  color: var(--color-muted);
+}
+
+[data-theme="dark"] footer {
+  border-color: var(--color-border);
+}
+
+/* ===================== BOTONES DE NAVBAR (idioma + dark) ===================== */
+.nav-controls {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  margin-left: 1rem;
+}
+
+.nav-btn {
+  background: transparent;
+  border: 1px solid var(--color-border);
+  color: var(--color-text);
+  font-size: 0.75rem;
+  font-weight: 600;
+  padding: 0.35rem 0.7rem;
+  border-radius: 999px;
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s, border-color 0.2s;
+  font-family: 'Inter', sans-serif;
+  letter-spacing: 0.05em;
+}
+
+.nav-btn:hover {
+  background: var(--color-accent);
+  color: #fff;
+  border-color: var(--color-accent);
+}
+
+/* ===================== ANIMACIONES DE ENTRADA ===================== */
+.anim {
+  opacity: 0;
+  transform: translateY(28px);
+  transition: opacity 0.55s ease, transform 0.55s ease;
+}
+
+.anim.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Hero: foto entra desde la derecha */
+.hero-foto-wrap.anim {
+  transform: translateX(30px);
+}
+
+.hero-foto-wrap.anim.visible {
+  transform: translateX(0);
+}
+
+/* Cards con delay escalonado ya se maneja en JS */
