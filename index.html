@@ -10,7 +10,7 @@
 
   <!-- ===================== NAVBAR ===================== -->
   <nav id="navbar">
-    
+    <div class="nav-logo">VRV</div>
     <ul class="nav-links">
       <li><a href="#sobre-mi">Sobre mí</a></li>
       <li><a href="#habilidades">Habilidades</a></li>
@@ -18,7 +18,7 @@
       <li><a href="#proyectos">Proyectos</a></li>
       <li><a href="#contacto">Contacto</a></li>
     </ul>
-    
+    <button class="nav-cta" onclick="scrollToSection('contacto')">Contratame</button>
   </nav>
 
   <!-- ===================== HERO ===================== -->
@@ -192,7 +192,7 @@
           <div class="timeline-fecha">Abr 2023 — Sep 2024</div>
           <div class="timeline-contenido">
             <h3>Pasante IT</h3>
-            <p class="timeline-empresa">Gate Gourmet Argentina SRL</p>
+            <p class="timeline-empresa">Gate Gourmet SRL</p>
             <ul>
               <li>Resolución de incidentes técnicos en entorno corporativo</li>
               <li>Instalación y configuración de equipos</li>
@@ -213,7 +213,7 @@
           </div>
           <div class="edu-item">
             <h3>Ingeniería Informática</h3>
-            <p>UADE · 2021 – 2022 (retomando 2026)</p>
+            <p>UADE · 2021 – 2022 (retomando)</p>
           </div>
         </div>
       </div>
@@ -250,6 +250,7 @@
               <span class="tag highlight">ASP.NET Core</span>
               <span class="tag highlight">REST APIs</span>
               <span class="tag">DTOs</span>
+              <span class="tag">SQL Server</span>
             </div>
             <h3>App Expedientes Web</h3>
             <span class="badge-dev">En desarrollo</span>
@@ -491,6 +492,9 @@
         <span class="tag highlight">C#</span><span class="tag highlight">Unity</span><span class="tag">Flyweight</span><span class="tag">Abstract Factory</span><span class="tag">Observer</span><span class="tag">Command</span>
       </div>
       <h2>Un-Ghost</h2>
+      <div class="modal-video">
+        <iframe src="https://www.youtube.com/embed/uAA7vbUhyIg" title="Un-Ghost gameplay" frameborder="0" allowfullscreen></iframe>
+      </div>
       <p>
         Prototipo experimental de un juego en primera persona. El jugador tiene dos armas:
         una que <strong>atrae fantasmas</strong> y otra que les hace daño. El objetivo es derribar
@@ -504,7 +508,9 @@
         donde implementé <strong>shaders personalizados</strong>.
       </p>
       <div class="modal-footer">
-        <span class="modal-estado">Repositorio privado · Próximamente público</span>
+        <div class="modal-links">
+          <a href="https://github.com/VVirzi/UN-GHOST" target="_blank" class="modal-link">⌥ Ver repositorio</a>
+        </div>
       </div>
     </div>
   </div>
@@ -517,6 +523,9 @@
         <span class="tag highlight">C#</span><span class="tag highlight">Unity</span><span class="tag">Mobile</span><span class="tag">Cloud Save</span><span class="tag">Abstract Factory</span>
       </div>
       <h2>Aplasta Bichos</h2>
+      <div class="modal-video">
+        <iframe src="https://www.youtube.com/embed/Sdv1oHOgmvU" title="Aplasta Bichos gameplay" frameborder="0" allowfullscreen></iframe>
+      </div>
       <p>
         Videojuego para dispositivos móviles. El jugador debe eliminar insectos que aparecen en pantalla,
         cada uno con su propio <strong>patrón de movimiento único</strong>. Disponés de varias armas
@@ -528,7 +537,9 @@
       </p>
       <p><strong>Patrones aplicados:</strong> Herencia, Polimorfismo, Abstract Factory, Flyweight, Interfaces.</p>
       <div class="modal-footer">
-        <span class="modal-estado">Repositorio privado · Próximamente público</span>
+        <div class="modal-links">
+          <a href="https://github.com/VVirzi/AplastaBichosMobile" target="_blank" class="modal-link">⌥ Ver repositorio</a>
+        </div>
       </div>
     </div>
   </div>
@@ -541,6 +552,9 @@
         <span class="tag highlight">C#</span><span class="tag highlight">Unity</span><span class="tag">Singleton</span><span class="tag">Object Pool</span>
       </div>
       <h2>Mago Tuccini</h2>
+      <div class="modal-video">
+        <iframe src="https://www.youtube.com/embed/FAkBDqWi5E0" title="Mago Tuccini gameplay" frameborder="0" allowfullscreen></iframe>
+      </div>
       <p>
         Mi <strong>primer proyecto en Unity</strong> (2022). Un mago que debe vencer enemigos en combate.
         Fue el punto de partida de todo mi aprendizaje en desarrollo de videojuegos — cada aspecto
@@ -551,7 +565,9 @@
         para la reutilización eficiente de objetos en escena.
       </p>
       <div class="modal-footer">
-        <span class="modal-estado">Repositorio privado · Próximamente público</span>
+        <div class="modal-links">
+          <a href="https://github.com/VVirzi/MagoTuccini" target="_blank" class="modal-link">⌥ Ver repositorio</a>
+        </div>
       </div>
     </div>
   </div>
@@ -564,6 +580,9 @@
         <span class="tag">Unity</span><span class="tag">C#</span><span class="tag">Arte 2D</span><span class="tag">Roguelike</span>
       </div>
       <h2>Ekeko</h2>
+      <div class="modal-video">
+        <iframe src="https://www.youtube.com/embed/XaYdKOkqgQs" title="Ekeko trailer" frameborder="0" allowfullscreen></iframe>
+      </div>
       <p>
         Roguelike 2.5D inspirado en la <strong>cultura latinoamericana</strong>. El mundo es 3D pero todos
         los assets son 2D — una combinación visual compleja inspirada en <em>Cult of the Lamb</em>.
@@ -580,6 +599,9 @@
         coherentemente dentro de un entorno 3D.
       </p>
       <div class="modal-footer">
+        <div class="modal-links">
+          <a href="https://dream-team-productions.itch.io/ekeko" target="_blank" class="modal-link modal-link-itch">🎮 Jugar en Itch.io</a>
+        </div>
         <span class="modal-estado">Repositorio privado · Proyecto grupal</span>
       </div>
     </div>
@@ -604,7 +626,9 @@
         desafíos de sincronización que implican.
       </p>
       <div class="modal-footer">
-        <span class="modal-estado">Repositorio privado · Proyecto grupal</span>
+        <div class="modal-links">
+          <a href="https://github.com/Facu-SH/JuegoEnRed" target="_blank" class="modal-link">⌥ Ver repositorio</a>
+        </div>
       </div>
     </div>
   </div>
@@ -627,6 +651,9 @@
         y la forma en que reaccionan al jugador.
       </p>
       <div class="modal-footer">
+        <div class="modal-links">
+          <a href="https://facu-sh.itch.io/goose-game" target="_blank" class="modal-link modal-link-itch">🎮 Jugar en Itch.io</a>
+        </div>
         <span class="modal-estado">Repositorio privado · Proyecto grupal</span>
       </div>
     </div>
@@ -640,6 +667,9 @@
         <span class="tag">Unreal Engine</span><span class="tag">Blueprints</span><span class="tag">Cinemáticas</span><span class="tag">Herramientas procedurales</span>
       </div>
       <h2>Unreal Manor</h2>
+      <div class="modal-video">
+        <iframe src="https://www.youtube.com/embed/wPbGHEwAhwU" title="Unreal Manor gameplay" frameborder="0" allowfullscreen></iframe>
+      </div>
       <p>
         Mi primer proyecto en <strong>Unreal Engine</strong>. Cambiar de Unity a Unreal fue como
         volver a aprender a caminar — una forma completamente distinta de pensar el desarrollo.
@@ -650,7 +680,10 @@
         <strong>herramientas procedurales</strong> para la generación de contenido.
       </p>
       <div class="modal-footer">
-        <span class="modal-estado">Repositorio privado · Próximamente público</span>
+        <div class="modal-links">
+          <a href="https://dfmr96.itch.io/unreal-manor" target="_blank" class="modal-link modal-link-itch">🎮 Jugar en Itch.io</a>
+          <a href="https://github.com/dfmr96/UnrealManor" target="_blank" class="modal-link">⌥ Ver repositorio</a>
+        </div>
       </div>
     </div>
   </div>
