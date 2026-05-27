@@ -205,12 +205,42 @@ window.addEventListener('DOMContentLoaded', () => {
     localStorage.getItem('theme') === 'dark' ? '☀️' : '🌙';
 });
 
-//Ocultar mail para evitar bots de spam
-const u = 'valentinovirzi94';
-const d = 'gmail.com';
-const link = document.getElementById('email-link');
-const text = document.getElementById('email-text');
-if (link && text) {
-  link.href = 'mailto:' + u + '@' + d;
-  text.textContent = u + '@' + d;
+// ===================== MODAL EMAIL (anti-scraping) =====================
+const _u = 'valentinovirzi94';
+const _d = 'gmail.com';
+ 
+function abrirModalEmail() {
+  // El email se arma solo al abrir el modal, nunca está en el HTML
+  const display = document.getElementById('email-display');
+  if (display) display.textContent = _u + '@' + _d;
+  abrirModal('modal-email');
+  // Resetear feedback
+  const fb = document.getElementById('copy-feedback');
+  if (fb) fb.textContent = '';
+  const btn = document.getElementById('copy-btn');
+  if (btn) {
+    btn.textContent = currentLang === 'en' ? 'Copy' : 'Copiar';
+    btn.classList.remove('copiado');
+  }
+}
+ 
+function copiarEmail() {
+  const email = _u + '@' + _d;
+  navigator.clipboard.writeText(email).then(() => {
+    const btn = document.getElementById('copy-btn');
+    const fb = document.getElementById('copy-feedback');
+    if (btn) {
+      btn.textContent = currentLang === 'en' ? 'Copied!' : 'Copiado!';
+      btn.classList.add('copiado');
+    }
+    if (fb) fb.textContent = currentLang === 'en' ? 'Email copied to clipboard.' : 'Email copiado al portapapeles.';
+    // Volver al estado original después de 2 segundos
+    setTimeout(() => {
+      if (btn) {
+        btn.textContent = currentLang === 'en' ? 'Copy' : 'Copiar';
+        btn.classList.remove('copiado');
+      }
+      if (fb) fb.textContent = '';
+    }, 2000);
+  });
 }

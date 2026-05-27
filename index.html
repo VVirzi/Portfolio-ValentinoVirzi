@@ -447,17 +447,17 @@
   </section>
 
   <!-- ===================== CONTACTO ===================== -->
-  <section id="contacto">
+<section id="contacto">
     <div class="section-inner contacto-inner">
       <h2 class="section-title" data-en="Fancy a Chat?" data-es="Hablemos">Fancy a Chat?</h2>
       <p class="contacto-texto" data-en="I'm open to new job opportunities. Feel free to reach out." data-es="Estoy abierto a nuevas oportunidades laborales. No dudes en escribirme.">
         I'm open to new job opportunities. Feel free to reach out.
       </p>
       <div class="contacto-links">
-        <a href="#" class="contacto-link" id="email-link">
+        <button class="contacto-link contacto-email-btn" onclick="abrirModalEmail()">
           <span class="contacto-icon">✉</span>
-          <span id="email-text">activar javascript</span>
-        </a>
+          <span data-en="Send me an email" data-es="Escribime un email">Send me an email</span>
+        </button>
         <a href="https://linkedin.com/in/valentino-virzi" target="_blank" class="contacto-link">
           <span class="contacto-icon">in</span>
           linkedin.com/in/valentino-virzi
@@ -772,6 +772,24 @@
     </div>
   </div>
 
+  <script src="main.js"></script>
+</body>
+</html>
+
+ <!-- Modal: Email -->
+  <div id="modal-email" class="modal" onclick="cerrarModalFuera(event, 'modal-email')">
+    <div class="modal-box modal-email-box">
+      <button class="modal-close" onclick="cerrarModal('modal-email')">✕</button>
+      <h2 data-en="Contact me" data-es="Contactame">Contact me</h2>
+      <p class="modal-email-desc" data-en="Copy my email and write me." data-es="Copiá mi email y escribime.">Copy my email and write me.</p>
+      <div class="modal-email-display">
+        <span id="email-display" class="modal-email-text" user-select="none">––</span>
+        <button class="modal-email-copy" id="copy-btn" onclick="copiarEmail()" data-en="Copy" data-es="Copiar">Copy</button>
+      </div>
+      <p class="modal-email-feedback" id="copy-feedback" data-en="Copied!" data-es="Copiado!"></p>
+    </div>
+  </div>
+ 
   <script src="main.js"></script>
 </body>
 </html>
