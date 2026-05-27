@@ -204,3 +204,13 @@ window.addEventListener('DOMContentLoaded', () => {
   if (darkMobile) darkMobile.textContent =
     localStorage.getItem('theme') === 'dark' ? '☀️' : '🌙';
 });
+
+//Ocultar mail para evitar bots de spam
+const u = 'valentinovirzi94';
+const d = 'gmail.com';
+const link = document.getElementById('email-link');
+const text = document.getElementById('email-text');
+if (link && text) {
+  link.href = 'mailto:' + u + '@' + d;
+  text.textContent = u + '@' + d;
+}
