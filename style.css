@@ -1401,3 +1401,463 @@ footer {
   min-height: 1.1rem;
   margin-bottom: 0 !important;
 }
+/* =====================================================================
+   CLAYMORPHISM
+   Todo el estilo "clay" vive en este bloque. Para volver al estilo
+   anterior, alcanza con borrar desde acá hasta el final del archivo.
+   Se usa ":root" delante de algunos selectores para ganarle a las
+   reglas de dark mode que están más arriba.
+   ===================================================================== */
+
+/* ---------- Tokens: modo claro ---------- */
+:root {
+  --clay-surface: #eeeadd;
+  --clay-dark: rgba(170, 162, 138, 0.55);
+  --clay-light: rgba(255, 255, 255, 0.5);
+  --clay-in-light: rgba(255, 255, 255, 0.75);
+  --clay-in-dark: rgba(150, 142, 118, 0.28);
+}
+
+/* ---------- Tokens: modo oscuro ---------- */
+[data-theme="dark"] {
+  --clay-surface: #1f1f1f;
+  --clay-dark: rgba(0, 0, 0, 0.65);
+  --clay-light: rgba(255, 255, 255, 0.045);
+  --clay-in-light: rgba(255, 255, 255, 0.07);
+  --clay-in-dark: rgba(0, 0, 0, 0.45);
+}
+
+/* ---------- Secciones verdes: sombras teñidas de verde ---------- */
+#sobre-mi,
+#proyectos {
+  --clay-dark: rgba(3, 40, 33, 0.6);
+  --clay-light: rgba(40, 150, 125, 0.45);
+}
+
+[data-theme="dark"] #sobre-mi,
+[data-theme="dark"] #proyectos {
+  --clay-dark: rgba(4, 60, 47, 0.55);
+  --clay-light: rgba(90, 220, 185, 0.35);
+}
+
+/* ---------- Recetas de sombra ----------
+   Se declaran en cada contexto para que tomen los tokens correctos */
+:root,
+[data-theme="dark"],
+#sobre-mi,
+#proyectos {
+  --clay:
+    8px 8px 18px var(--clay-dark),
+    -5px -5px 12px var(--clay-light),
+    inset 0 2px 4px var(--clay-in-light),
+    inset 0 -3px 6px var(--clay-in-dark);
+  --clay-sm:
+    4px 4px 9px var(--clay-dark),
+    -4px -4px 9px var(--clay-light),
+    inset 0 2px 3px var(--clay-in-light),
+    inset 0 -2px 4px var(--clay-in-dark);
+  --clay-hover:
+    12px 12px 26px var(--clay-dark),
+    -6px -6px 16px var(--clay-light),
+    inset 0 2px 4px var(--clay-in-light),
+    inset 0 -3px 6px var(--clay-in-dark);
+  --clay-pressed:
+    inset 4px 4px 9px var(--clay-dark),
+    inset -4px -4px 9px var(--clay-light);
+  --clay-outer:
+    8px 8px 18px var(--clay-dark),
+    -5px -5px 12px var(--clay-light);
+  --clay-outer-hover:
+    12px 12px 26px var(--clay-dark),
+    -6px -6px 16px var(--clay-light);
+}
+
+/* ---------- Tarjetas blancas: superficie y relieve interno ----------
+   Sobre blanco una luz blanca no se ve, así que el volumen sale de un
+   degradé muy sutil + sombras internas abajo y a la derecha */
+:root {
+  --card-bg: linear-gradient(145deg, #ffffff 0%, #f3f1ea 100%);
+  --card-inset:
+    inset 0 2px 3px rgba(255, 255, 255, 0.95),
+    inset 0 -8px 16px rgba(150, 142, 118, 0.22),
+    inset -6px 0 14px rgba(150, 142, 118, 0.1);
+}
+
+[data-theme="dark"] {
+  --card-bg: linear-gradient(145deg, #272727 0%, #1b1b1b 100%);
+  --card-inset:
+    inset 0 2px 3px rgba(255, 255, 255, 0.08),
+    inset 0 -8px 16px rgba(0, 0, 0, 0.45),
+    inset -6px 0 14px rgba(0, 0, 0, 0.2);
+}
+
+/* Estas solo se declaran en la raíz: no cambian dentro de secciones verdes */
+:root,
+[data-theme="dark"] {
+  --clay-green:
+    5px 5px 12px rgba(6, 70, 57, 0.4),
+    -3px -3px 8px var(--clay-light),
+    inset 0 2px 3px rgba(255, 255, 255, 0.25),
+    inset 0 -3px 4px rgba(0, 0, 0, 0.2);
+  --clay-green-pressed:
+    inset 3px 3px 7px rgba(0, 0, 0, 0.3),
+    inset -2px -2px 5px rgba(255, 255, 255, 0.12);
+  --clay-tag:
+    3px 3px 7px var(--clay-dark),
+    -2px -2px 6px var(--clay-light),
+    inset 0 2px 3px var(--clay-in-light),
+    inset 0 -2px 4px var(--clay-in-dark);
+}
+
+/* ---------- Estructura: sin líneas divisorias ---------- */
+section,
+footer {
+  border-top: none;
+}
+
+#habilidades {
+  background-color: var(--color-bg);
+}
+
+/* ---------- Tipografía Bagel Fat One: letras de arcilla ----------
+   El efecto lo hacen los filtros SVG que están al inicio del index.html */
+.hero-name {
+  color: #2e2e2e;
+  filter: url(#clay-xl);
+  padding-bottom: 0.08em;
+}
+
+[data-theme="dark"] .hero-name {
+  color: #ece8dc;
+}
+
+.section-title,
+.dato-num {
+  filter: url(#clay-md);
+}
+
+/* ---------- Foto: aro de arcilla ---------- */
+:root .hero-foto-wrap {
+  padding: 12px;
+  border-radius: 50%;
+  background: var(--clay-surface);
+  box-shadow: var(--clay);
+  line-height: 0;
+}
+
+:root .hero-foto {
+  border: none;
+  box-shadow: none;
+}
+
+/* ---------- Navbar ---------- */
+:root #navbar,
+:root #navbar:hover {
+  background: var(--clay-surface);
+  border: none;
+  backdrop-filter: none;
+  box-shadow: var(--clay);
+  padding: 0.55rem 0.7rem 0.55rem 1rem;
+}
+
+:root .nav-links a {
+  transition: background 0.2s, color 0.2s, box-shadow 0.2s;
+}
+
+:root .nav-links a:hover,
+:root .nav-links a.activo {
+  background: var(--color-accent);
+  color: #fff;
+  box-shadow: var(--clay-green);
+}
+
+/* Botones redondos: idioma, tema y mobile */
+:root .nav-btn,
+:root .mobile-btn {
+  background: var(--clay-surface);
+  color: var(--color-text);
+  border: none;
+  box-shadow: var(--clay-sm);
+  backdrop-filter: none;
+  transition: box-shadow 0.2s, transform 0.15s, color 0.2s;
+}
+
+:root .nav-btn {
+  min-width: 2.3rem;
+  height: 2.3rem;
+  padding: 0 0.75rem;
+}
+
+:root .nav-btn:hover,
+:root .mobile-btn:hover {
+  background: var(--clay-surface);
+  color: var(--color-accent);
+  border: none;
+  transform: translateY(-1px);
+}
+
+:root .nav-btn:active,
+:root .mobile-btn:active {
+  box-shadow: var(--clay-pressed);
+  transform: translateY(1px);
+}
+
+:root .mobile-menu {
+  background: var(--clay-surface);
+  border: none;
+  border-radius: 20px;
+  backdrop-filter: none;
+  box-shadow: var(--clay);
+}
+
+:root .mobile-menu ul li a:hover {
+  background: var(--color-accent);
+  color: #fff;
+  box-shadow: var(--clay-green);
+}
+
+/* ---------- Botones principales (verdes) ---------- */
+:root .hero-actions button,
+:root .contacto-cv-btn,
+:root .modal-email-copy,
+:root .modal-link.modal-link-itch {
+  background: var(--color-accent);
+  color: #fff;
+  border: none;
+  box-shadow: var(--clay-green);
+  transition: box-shadow 0.2s, transform 0.15s;
+}
+
+:root .hero-actions button:hover,
+:root .contacto-cv-btn:hover,
+:root .modal-email-copy:hover,
+:root .modal-link.modal-link-itch:hover {
+  background: var(--color-accent);
+  color: #fff;
+  transform: translateY(-2px);
+}
+
+:root .hero-actions button:active,
+:root .contacto-cv-btn:active,
+:root .modal-email-copy:active,
+:root .modal-link.modal-link-itch:active {
+  box-shadow: var(--clay-green-pressed);
+  transform: translateY(1px);
+}
+
+:root .modal-email-copy.copiado {
+  background: #2d9e5f;
+}
+
+/* ---------- Botones secundarios (crema) ---------- */
+:root .hero-actions a,
+:root .contacto-link,
+:root .modal-link,
+:root .modal-close {
+  background: var(--clay-surface);
+  color: var(--color-text);
+  border: none;
+  box-shadow: var(--clay-sm);
+  transition: box-shadow 0.2s, transform 0.15s, color 0.2s;
+}
+
+:root .contacto-link {
+  padding: 0.7rem 1.4rem;
+}
+
+:root .hero-actions a:hover,
+:root .contacto-link:hover,
+:root .modal-link:hover,
+:root .modal-close:hover {
+  background: var(--clay-surface);
+  color: var(--color-accent);
+  border: none;
+  transform: translateY(-2px);
+}
+
+:root .hero-actions a:active,
+:root .contacto-link:active,
+:root .modal-link:active,
+:root .modal-close:active {
+  box-shadow: var(--clay-pressed);
+  transform: translateY(1px);
+}
+
+/* ---------- Cards ---------- */
+:root .proyecto-card,
+:root .soft-skill-card,
+:root .edu-item {
+  background: var(--card-bg);
+  border: none;
+  border-radius: 22px;
+  box-shadow: var(--clay-outer), var(--card-inset);
+  transition: transform 0.25s, box-shadow 0.25s;
+}
+
+:root .proyecto-card:hover,
+:root .soft-skill-card:hover,
+:root .edu-item:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--clay-outer-hover), var(--card-inset);
+}
+
+/* El proyecto destacado lleva un halo claro */
+:root .proyecto-card.proyecto-estrella {
+  box-shadow: 0 0 28px rgba(255, 255, 255, 0.3), var(--clay-outer), var(--card-inset);
+}
+
+:root .proyecto-card.proyecto-estrella:hover {
+  box-shadow: 0 0 34px rgba(255, 255, 255, 0.4), var(--clay-outer-hover), var(--card-inset);
+}
+
+/* ---------- Tags y badges ---------- */
+:root .tag {
+  background: var(--clay-surface);
+  border: none;
+  color: var(--color-text);
+  box-shadow: var(--clay-tag);
+}
+
+:root .tag.highlight {
+  background: var(--color-accent);
+  color: #fff;
+  box-shadow:
+    2px 2px 5px rgba(6, 70, 57, 0.35),
+    inset 0 1px 2px rgba(255, 255, 255, 0.25),
+    inset 0 -2px 3px rgba(0, 0, 0, 0.18);
+}
+
+:root .badge,
+:root .badge-dev {
+  box-shadow:
+    2px 2px 5px rgba(0, 0, 0, 0.12),
+    inset 0 1px 2px rgba(255, 255, 255, 0.3),
+    inset 0 -2px 3px rgba(0, 0, 0, 0.18);
+}
+
+/* ---------- Elementos hundidos (hacia adentro) ---------- */
+:root .timeline-logro,
+:root .modal-impacto,
+:root .modal-email-display {
+  border: none;
+  border-radius: 14px;
+  box-shadow: var(--clay-pressed);
+}
+
+:root .timeline-logro {
+  background: var(--color-bg);
+  color: var(--color-accent);
+}
+
+:root .modal-impacto,
+:root .modal-email-display {
+  background: var(--clay-surface);
+  color: var(--color-accent);
+}
+
+/* ---------- Modales ---------- */
+/* Sobre el fondo desenfocado no lleva sombras exteriores,
+   solo el relieve interior que le da volumen */
+:root .modal-box {
+  background: var(--card-bg);
+  border: none;
+  border-radius: 26px;
+  box-shadow: var(--card-inset);
+}
+
+/* ---------- Barra de scroll de los modales ----------
+   Canal hundido + barra verde con relieve, como los botones y tags */
+.modal-box::-webkit-scrollbar {
+  width: 16px;
+}
+
+.modal-box::-webkit-scrollbar-track {
+  margin: 26px 0;
+  border: 5px solid transparent;
+  border-radius: 999px;
+  background-color: rgba(150, 142, 118, 0.14);
+  background-clip: padding-box;
+  box-shadow: inset 1px 1px 3px rgba(150, 142, 118, 0.35);
+}
+
+.modal-box::-webkit-scrollbar-thumb {
+  border: 4px solid transparent;
+  border-radius: 999px;
+  background-color: var(--color-accent);
+  background-clip: padding-box;
+  box-shadow:
+    inset 0 2px 2px rgba(255, 255, 255, 0.3),
+    inset 0 -2px 3px rgba(0, 0, 0, 0.25);
+}
+
+.modal-box::-webkit-scrollbar-thumb:hover {
+  background-color: var(--color-accent-dark);
+}
+
+[data-theme="dark"] .modal-box::-webkit-scrollbar-track {
+  background-color: rgba(0, 0, 0, 0.35);
+  box-shadow: inset 1px 1px 3px rgba(0, 0, 0, 0.6);
+}
+
+/* Firefox no soporta lo de arriba: usa los colores estándar */
+@supports not selector(::-webkit-scrollbar) {
+  .modal-box {
+    scrollbar-width: thin;
+    scrollbar-color: var(--color-accent) transparent;
+  }
+}
+
+/* ---------- Mobile ---------- */
+@media (max-width: 768px) {
+  .hero-name {
+    filter: url(#clay-md);
+  }
+
+  :root .hero-foto-wrap {
+    padding: 8px;
+  }
+
+  :root .proyecto-card:hover,
+  :root .soft-skill-card:hover,
+  :root .edu-item:hover {
+    transform: none;
+  }
+}
+
+/* ---------- Imágenes dentro de los modales ---------- */
+.modal-banner {
+  display: block;
+  width: 100%;
+  border-radius: 14px;
+  margin: 1rem 0 1.3rem;
+}
+
+/* Imagen que se abre en tamaño completo (ej: diagrama UML) */
+:root .modal-figura {
+  display: block;
+  margin: 0.5rem 0 1.3rem;
+  border-radius: 16px;
+  overflow: hidden;
+  text-decoration: none;
+  background: var(--card-bg);
+  box-shadow: var(--clay-sm);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+:root .modal-figura:hover {
+  transform: translateY(-2px);
+}
+
+.modal-figura img {
+  display: block;
+  width: 100%;
+  background: #fff;
+}
+
+.modal-figura span {
+  display: block;
+  padding: 0.7rem 1rem;
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--color-accent);
+}

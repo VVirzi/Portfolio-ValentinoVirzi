@@ -9,6 +9,47 @@
 </head>
 <body>
 
+  <!-- ===================== FILTROS CLAY PARA LA TIPOGRAFÍA =====================
+       "Inflan" las letras: desenfocan su forma para usarla como mapa de relieve
+       y le aplican una luz desde arriba a la izquierda.
+       clay-xl: tu nombre · clay-md: títulos y números -->
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+    <filter id="clay-xl" x="-5%" y="-15%" width="115%" height="140%" color-interpolation-filters="sRGB">
+      <feGaussianBlur in="SourceAlpha" stdDeviation="4" result="relieve"/>
+      <feDiffuseLighting in="relieve" surfaceScale="6" diffuseConstant="1.08" lighting-color="#fff" result="sombreado">
+        <feDistantLight azimuth="225" elevation="65"/>
+      </feDiffuseLighting>
+      <feSpecularLighting in="relieve" surfaceScale="5" specularConstant="0.4" specularExponent="30" lighting-color="#eae7dc" result="brillo">
+        <feDistantLight azimuth="225" elevation="28"/>
+      </feSpecularLighting>
+      <feComposite in="brillo" in2="SourceAlpha" operator="in" result="brilloLetra"/>
+      <feComposite in="SourceGraphic" in2="sombreado" operator="arithmetic" k1="1" result="letraSombreada"/>
+      <feComposite in="letraSombreada" in2="brilloLetra" operator="arithmetic" k2="1" k3="1" result="letra"/>
+      <feGaussianBlur in="SourceAlpha" stdDeviation="8" result="desenfoque"/>
+      <feOffset in="desenfoque" dy="10" result="desplazada"/>
+      <feFlood flood-color="#3c3220" flood-opacity="0.25"/>
+      <feComposite in2="desplazada" operator="in" result="sombra"/>
+      <feMerge><feMergeNode in="sombra"/><feMergeNode in="letra"/></feMerge>
+    </filter>
+    <filter id="clay-md" x="-5%" y="-15%" width="115%" height="150%" color-interpolation-filters="sRGB">
+      <feGaussianBlur in="SourceAlpha" stdDeviation="3.5" result="relieve"/>
+      <feDiffuseLighting in="relieve" surfaceScale="3" diffuseConstant="1.08" lighting-color="#fff" result="sombreado">
+        <feDistantLight azimuth="225" elevation="65"/>
+      </feDiffuseLighting>
+      <feSpecularLighting in="relieve" surfaceScale="3" specularConstant="0.55" specularExponent="16" lighting-color="#fff" result="brillo">
+        <feDistantLight azimuth="225" elevation="28"/>
+      </feSpecularLighting>
+      <feComposite in="brillo" in2="SourceAlpha" operator="in" result="brilloLetra"/>
+      <feComposite in="SourceGraphic" in2="sombreado" operator="arithmetic" k1="1" result="letraSombreada"/>
+      <feComposite in="letraSombreada" in2="brilloLetra" operator="arithmetic" k2="1" k3="1" result="letra"/>
+      <feGaussianBlur in="SourceAlpha" stdDeviation="3" result="desenfoque"/>
+      <feOffset in="desenfoque" dy="4" result="desplazada"/>
+      <feFlood flood-color="#3c3220" flood-opacity="0.22"/>
+      <feComposite in2="desplazada" operator="in" result="sombra"/>
+      <feMerge><feMergeNode in="sombra"/><feMergeNode in="letra"/></feMerge>
+    </filter>
+  </svg>
+
   <!-- ===================== NAVBAR ===================== -->
   <nav id="navbar">
     <ul class="nav-links">
@@ -51,7 +92,7 @@
     <div class="hero-inner">
       <div class="hero-content">
         <p class="hero-eyebrow">Backend Developer · .NET / C#</p>
-        <h1 class="hero-name">Valentino<br>Román Virzi</h1>
+        <h1 class="hero-name">Valentino<br>Román<br>Virzi</h1>
         <p class="hero-tagline">
           <span data-en="I build robust and scalable systems." data-es="Construyo sistemas robustos y escalables.">I build robust and scalable systems.</span><br>
           <span data-en="Specialized in C#, .NET Core, ASP.NET and SQL Server." data-es="Especializado en C#, .NET Core, ASP.NET y SQL Server.">Specialized in C#, .NET Core, ASP.NET and SQL Server.</span>
@@ -292,7 +333,7 @@
           </div>
           <div class="edu-item">
             <h3 data-en="Computer Engineering" data-es="Ingeniería Informática">Computer Engineering</h3>
-            <p data-en="UADE · 2021 – 2022 (resuming 2026)" data-es="UADE · 2021 – 2022 (retomando 2026)">UADE · 2021 – 2022 (resuming 2026)</p>
+            <p data-en="UADE · 2021 – present" data-es="UADE · 2021 – en curso">UADE · 2021 – en curso</p>
           </div>
         </div>
       </div>
@@ -328,11 +369,24 @@
             <div class="proyecto-tags">
               <span class="tag highlight">ASP.NET Core</span>
               <span class="tag highlight">REST APIs</span>
+              <span class="tag">React</span>
               <span class="tag">DTOs</span>
             </div>
             <h3>App Expedientes Web</h3>
+            <p data-en="The web version of App Expedientes: a REST API with a React frontend that processes, reviews and exports billing files in each client's format." data-es="La versión web de App Expedientes: una API REST con frontend en React que procesa, revisa y exporta los archivos de facturación en el formato de cada cliente.">The web version of App Expedientes: a REST API with a React frontend that processes, reviews and exports billing files in each client's format.</p>
+            <span class="proyecto-cta" data-en="View details →" data-es="Ver detalles →">View details →</span>
+          </div>
+
+          <div class="proyecto-card" onclick="abrirModal('modal-rutaxiv')">
+            <div class="proyecto-tags">
+              <span class="tag highlight">Java</span>
+              <span class="tag highlight">JavaFX</span>
+              <span class="tag">MVC</span>
+              <span class="tag">Observer</span>
+            </div>
+            <h3>Ruta XIV</h3>
             <span class="badge-dev" data-en="In development" data-es="En desarrollo">In development</span>
-            <p data-en="Migration of the desktop app to a modern web architecture with REST APIs. More robust and professional code." data-es="Migración de la aplicación de escritorio a una arquitectura web moderna con APIs REST. Código más robusto y profesional.">Migration of the desktop app to a modern web architecture with REST APIs. More robust and professional code.</p>
+            <p data-en="Operations coordination system for Pope Leo XIV's visit to Argentina: route, security zones and incidents in one app." data-es="Sistema de coordinación operativa para la visita del papa León XIV a la Argentina: recorrido, zonas de seguridad e incidentes en una sola app.">Operations coordination system for Pope Leo XIV's visit to Argentina: route, security zones and incidents in one app.</p>
             <span class="proyecto-cta" data-en="View details →" data-es="Ver detalles →">View details →</span>
           </div>
 
@@ -535,21 +589,64 @@
     <div class="modal-box">
       <button class="modal-close" onclick="cerrarModal('modal-expedientes-web')">✕</button>
       <div class="modal-tags">
-        <span class="tag highlight">ASP.NET Core</span><span class="tag highlight">REST APIs</span><span class="tag">DTOs</span><span class="tag" data-en="Inheritance" data-es="Herencia">Inheritance</span><span class="tag" data-en="Polymorphism" data-es="Polimorfismo">Polymorphism</span>
+        <span class="tag highlight">ASP.NET Core</span><span class="tag highlight">REST APIs</span><span class="tag">React</span><span class="tag">Tailwind CSS</span><span class="tag">Swagger</span><span class="tag">DTOs</span><span class="tag" data-en="Polymorphism" data-es="Polimorfismo">Polymorphism</span>
       </div>
       <h2>App Expedientes Web</h2>
-      <span class="badge-dev" data-en="In development" data-es="En desarrollo">In development</span>
-      <p style="margin-top: 1rem;" data-en="Evolution of the original App Expedientes into a modern web architecture. The code was rewritten from scratch with a more robust and professional approach using <strong>ASP.NET Core</strong> and REST API architecture." data-es="Evolución de la App Expedientes original hacia una arquitectura web moderna. El código fue reescrito desde cero con un enfoque más robusto y profesional, utilizando <strong>ASP.NET Core</strong> y arquitectura de APIs REST.">
-        Evolution of the original App Expedientes into a modern web architecture. The code was rewritten from scratch with a more robust and professional approach using <strong>ASP.NET Core</strong> and REST API architecture.
+      <div class="modal-video">
+        <iframe src="https://www.youtube.com/embed/AcAknVS79BQ" title="App Expedientes Web demo" frameborder="0" allowfullscreen></iframe>
+      </div>
+      <p data-en="The web version of App Expedientes, rewritten from scratch. The backend is an <strong>ASP.NET Core REST API</strong> documented with Swagger and organized into services and DTOs. The frontend is built with <strong>React</strong> and Tailwind CSS." data-es="La versión web de App Expedientes, reescrita desde cero. El backend es una <strong>API REST en ASP.NET Core</strong> documentada con Swagger y organizada en servicios y DTOs. El frontend está hecho en <strong>React</strong> con Tailwind CSS.">
+        The web version of App Expedientes, rewritten from scratch. The backend is an <strong>ASP.NET Core REST API</strong> documented with Swagger and organized into services and DTOs. The frontend is built with <strong>React</strong> and Tailwind CSS.
       </p>
-      <p data-en="The main challenge is the conceptual migration: rethinking a desktop application in terms of <strong>services, endpoints and DTOs</strong>, keeping all business logic intact but adapted for the web." data-es="El principal desafío es la migración conceptual: repensar una aplicación de escritorio en términos de <strong>servicios, endpoints y DTOs</strong>, manteniendo toda la lógica de negocio intacta pero adaptada al entorno web.">
-        The main challenge is the conceptual migration: rethinking a desktop application in terms of <strong>services, endpoints and DTOs</strong>, keeping all business logic intact but adapted for the web.
+      <p data-en="The workflow has three steps: choose the client, upload the invoice, metadata and ANMAT files, and review everything before exporting. In the review you can check the items of each invoice and <strong>edit quantities</strong> without touching the source files. Each client then gets its file in the exact format it requires." data-es="El flujo tiene tres pasos: elegir el cliente, cargar los archivos de facturas, metadata y ANMAT, y revisar todo antes de exportar. En la revisión se pueden ver los ítems de cada factura y <strong>editar cantidades</strong> sin tocar los archivos originales. Después cada cliente recibe su archivo en el formato exacto que pide.">
+        The workflow has three steps: choose the client, upload the invoice, metadata and ANMAT files, and review everything before exporting. In the review you can check the items of each invoice and <strong>edit quantities</strong> without touching the source files. Each client then gets its file in the exact format it requires.
       </p>
-      <p><strong data-en="Technologies:" data-es="Tecnologías:">Technologies:</strong> .NET, ASP.NET Core, REST APIs, DTOs, Interfaces, Inheritance, Polymorphism.</p>
+      <p data-en="The main challenge was rethinking a desktop application in terms of <strong>endpoints, services and DTOs</strong>, while keeping all the business logic intact." data-es="El principal desafío fue repensar una aplicación de escritorio en términos de <strong>endpoints, servicios y DTOs</strong>, manteniendo intacta toda la lógica de negocio.">
+        The main challenge was rethinking a desktop application in terms of <strong>endpoints, services and DTOs</strong>, while keeping all the business logic intact.
+      </p>
+      <p><strong data-en="Technologies:" data-es="Tecnologías:">Technologies:</strong> .NET, ASP.NET Core, REST APIs, React, Tailwind CSS, Swagger, DTOs, Interfaces, <span data-en="Inheritance, Polymorphism." data-es="Herencia, Polimorfismo.">Inheritance, Polymorphism.</span></p>
       <div class="modal-footer">
         <div class="modal-links">
           <a href="https://github.com/VVirzi/ExpedientesWEB" target="_blank" class="modal-link" data-en="⌥ View repository" data-es="⌥ Ver repositorio">⌥ View repository</a>
         </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal: Ruta XIV -->
+  <div id="modal-rutaxiv" class="modal" onclick="cerrarModalFuera(event, 'modal-rutaxiv')">
+    <div class="modal-box">
+      <button class="modal-close" onclick="cerrarModal('modal-rutaxiv')">✕</button>
+      <div class="modal-tags">
+        <span class="tag highlight">Java</span><span class="tag highlight">JavaFX</span><span class="tag">MVC</span><span class="tag">Observer</span><span class="tag">Strategy</span><span class="tag">Factory</span>
+      </div>
+
+      <div class="modal-header-proyecto">
+        <img src="assets/img/rutaxiv/RutaXIV-02.png" alt="Ruta XIV logo" class="modal-logo" />
+        <h2>Ruta XIV</h2>
+      </div>
+      <span class="badge-dev" data-en="In development" data-es="En desarrollo">In development</span>
+
+      <img src="assets/img/rutaxiv/RutaXIV-01.png" alt="Ruta XIV" class="modal-banner" />
+
+      <p data-en="Operations coordination system for Pope Leo XIV's apostolic visit to Argentina (Buenos Aires, Córdoba and Luján). It brings together two areas that don't work in isolation in a real operation: <strong>route logistics</strong> and <strong>operational security</strong>." data-es="Sistema de coordinación operativa para la visita apostólica del papa León XIV a la Argentina (Buenos Aires, Córdoba y Luján). Integra dos áreas que en un operativo real no funcionan aisladas: la <strong>logística del recorrido</strong> y la <strong>seguridad operativa</strong>.">
+        Operations coordination system for Pope Leo XIV's apostolic visit to Argentina (Buenos Aires, Córdoba and Luján). It brings together two areas that don't work in isolation in a real operation: <strong>route logistics</strong> and <strong>operational security</strong>.
+      </p>
+      <p data-en="The route is split into segments with planned and actual times. Each segment activates one or more <strong>security zones</strong> with capacity, status (normal, alert, critical) and assigned staff. When an incident is reported in a zone, the control center evaluates it and its <strong>impact on the route</strong> is reflected as accumulated delay." data-es="El recorrido se divide en tramos con horario previsto y real. Cada tramo activa una o más <strong>zonas de seguridad</strong> con capacidad, estado (normal, alerta, crítico) y personal asignado. Cuando se reporta un incidente en una zona, el centro de control lo evalúa y su <strong>impacto sobre el recorrido</strong> se refleja como demora acumulada.">
+        The route is split into segments with planned and actual times. Each segment activates one or more <strong>security zones</strong> with capacity, status (normal, alert, critical) and assigned staff. When an incident is reported in a zone, the control center evaluates it and its <strong>impact on the route</strong> is reflected as accumulated delay.
+      </p>
+      <p data-en="It follows an <strong>MVC</strong> architecture with several design patterns: <strong>Observer</strong> so zones notify the control center, <strong>Strategy</strong> for the response protocol of each incident type and <strong>Factory</strong> to create the right protocol. Vehicles (popemobile, ambulances, press, pilgrim buses) and staff (security, medical) are modeled with inheritance and polymorphism." data-es="Sigue una arquitectura <strong>MVC</strong> con varios patrones de diseño: <strong>Observer</strong> para que las zonas notifiquen al centro de control, <strong>Strategy</strong> para el protocolo de respuesta de cada tipo de incidente y <strong>Factory</strong> para crear el protocolo correcto. Los vehículos (papamóvil, ambulancias, prensa, colectivos de peregrinos) y el personal (seguridad, médico) se modelan con herencia y polimorfismo.">
+        It follows an <strong>MVC</strong> architecture with several design patterns: <strong>Observer</strong> so zones notify the control center, <strong>Strategy</strong> for the response protocol of each incident type and <strong>Factory</strong> to create the right protocol. Vehicles (popemobile, ambulances, press, pilgrim buses) and staff (security, medical) are modeled with inheritance and polymorphism.
+      </p>
+
+      <a href="assets/img/rutaxiv/UML.png" target="_blank" class="modal-figura">
+        <img src="assets/img/rutaxiv/UML.png" alt="Ruta XIV class diagram" />
+        <span data-en="Class diagram · Open full size" data-es="Diagrama de clases · Abrir en tamaño completo">Class diagram · Open full size</span>
+      </a>
+
+      <p><strong data-en="Technologies:" data-es="Tecnologías:">Technologies:</strong> Java, JavaFX, MVC, Observer, Strategy, Factory, <span data-en="Inheritance, Polymorphism." data-es="Herencia, Polimorfismo.">Inheritance, Polymorphism.</span></p>
+      <div class="modal-footer">
+        <span class="modal-estado" data-en="In development" data-es="En desarrollo">In development</span>
       </div>
     </div>
   </div>
@@ -772,7 +869,6 @@
     </div>
   </div>
 
-  <script src="main.js"></script>
 </body>
 </html>
 
@@ -791,5 +887,6 @@
   </div>
  
   <script src="main.js"></script>
+  <script src="confeti.js"></script>
 </body>
 </html>
